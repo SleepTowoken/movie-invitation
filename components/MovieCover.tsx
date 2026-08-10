@@ -9,7 +9,7 @@ type MovieCoverProps = {
 
 /** Replace public/movie-cover.png later without changing this component. */
 export function MovieCover({
-  src = `${basePath}/movie-cover.png`,
+  src = `${basePath}/movie-cover.png?v=20260810-1`,
   alt = "《去你的岛》电影封面占位图",
 }: MovieCoverProps) {
   return (
