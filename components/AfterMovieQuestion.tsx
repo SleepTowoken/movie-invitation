@@ -33,9 +33,9 @@ export function AfterMovieQuestion() {
 
         <p className="mb-4 text-sm tracking-[0.18em] text-[#59627d]">电影散场之后</p>
         <h1 className="font-display text-[2rem] font-medium leading-[1.5] tracking-[-0.025em] text-[#303954] sm:text-[2.22rem]">
-          电影看完啦
+          看完电影
           <br />
-          可以送你回家吗？
+          可以带你去散步吗？
         </h1>
 
         <p className="mx-auto mb-9 mt-5 max-w-[18rem] text-[0.94rem] leading-7 text-[#59627d]">

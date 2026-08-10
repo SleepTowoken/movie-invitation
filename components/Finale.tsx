@@ -28,17 +28,24 @@ export function Finale() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: prefersReducedMotion ? 0.01 : 0.72, delay: 0.28, ease: gentleEase }}
         >
-          我们看完电影
-          <br />
-          可以去散步吗？
+          那就这样约定啦
           <span className="film-mark title-film-mark" aria-hidden="true"><i /><i /></span>
         </motion.h1>
 
+        <motion.p
+          className="mt-5 text-base tracking-[0.08em] text-[#56617c] sm:text-lg"
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: prefersReducedMotion ? 0.01 : 0.68, delay: 0.48, ease: gentleEase }}
+        >
+          期待和你一起看电影
+        </motion.p>
+
         <motion.div
-          className="mx-auto mt-9 flex w-40 items-center gap-3"
+          className="mx-auto mt-10 flex w-40 items-center gap-3"
           initial={prefersReducedMotion ? false : { opacity: 0, scaleX: 0.4 }}
           animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ duration: prefersReducedMotion ? 0.01 : 0.75, delay: 0.55, ease: gentleEase }}
+          transition={{ duration: prefersReducedMotion ? 0.01 : 0.75, delay: 0.7, ease: gentleEase }}
           aria-hidden="true"
         >
           <span className="h-px flex-1 bg-gradient-to-r from-transparent to-[#a2aac9]" />
