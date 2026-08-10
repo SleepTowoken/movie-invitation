@@ -6,7 +6,7 @@ import { TransitionButton } from "@/components/TransitionButton";
 
 type ChoiceButtonsProps = {
   acceptLabel: string;
-  declineLabel: string;
+  declineLabels: readonly string[];
   href: "/after-movie" | "/confirmed";
   onExitStart: () => void;
 };
@@ -14,7 +14,7 @@ type ChoiceButtonsProps = {
 /** Keeps both choices and their interaction rules in one reusable component. */
 export function ChoiceButtons({
   acceptLabel,
-  declineLabel,
+  declineLabels,
   href,
   onExitStart,
 }: ChoiceButtonsProps) {
@@ -25,7 +25,7 @@ export function ChoiceButtons({
       <TransitionButton href={href} onExitStart={onExitStart} buttonRef={acceptRef}>
         {acceptLabel}
       </TransitionButton>
-      <FloatingButton avoidRef={acceptRef}>{declineLabel}</FloatingButton>
+      <FloatingButton avoidRef={acceptRef} labels={declineLabels} />
     </div>
   );
 }

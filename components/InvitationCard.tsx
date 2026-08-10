@@ -5,6 +5,13 @@ import { ChoiceButtons } from "@/components/ChoiceButtons";
 import { MovieCover } from "@/components/MovieCover";
 import { gentleEase } from "@/lib/motion";
 
+const invitationDeclineLabels = [
+  "不愿意",
+  "想清楚噢",
+  "真的不愿意吗",
+  "我好伤心",
+] as const;
+
 type InvitationCardProps = {
   onExitStart: () => void;
   reveal?: boolean;
@@ -47,7 +54,7 @@ export function InvitationCard({ onExitStart, reveal = true }: InvitationCardPro
 
         <ChoiceButtons
           acceptLabel="愿意"
-          declineLabel="不愿意"
+          declineLabels={invitationDeclineLabels}
           href="/after-movie"
           onExitStart={onExitStart}
         />

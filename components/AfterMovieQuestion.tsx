@@ -6,6 +6,13 @@ import { ChoiceButtons } from "@/components/ChoiceButtons";
 import { PageShell } from "@/components/PageShell";
 import { gentleEase } from "@/lib/motion";
 
+const afterMovieDeclineLabels = [
+  "不可以",
+  "想清楚噢",
+  "真的不可以吗",
+  "我好伤心",
+] as const;
+
 export function AfterMovieQuestion() {
   const [isExiting, setIsExiting] = useState(false);
   const prefersReducedMotion = useReducedMotion();
@@ -37,7 +44,7 @@ export function AfterMovieQuestion() {
 
         <ChoiceButtons
           acceptLabel="可以"
-          declineLabel="不可以"
+          declineLabels={afterMovieDeclineLabels}
           href="/confirmed"
           onExitStart={() => setIsExiting(true)}
         />
