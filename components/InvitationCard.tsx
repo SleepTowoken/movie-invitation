@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { InvitationActions } from "@/components/InvitationActions";
 import { MovieCover } from "@/components/MovieCover";
-import { PositiveAction } from "@/components/PositiveAction";
 import { gentleEase } from "@/lib/motion";
 
 type InvitationCardProps = {
@@ -62,11 +62,13 @@ export function InvitationCard({ onExitStart, reveal = true }: InvitationCardPro
           《去你的岛》
         </p>
 
-        <PositiveAction
-          label="收下电影票"
+        <InvitationActions
+          acceptLabel="收下电影票"
           busyLabel="已收下"
+          declineLabels={["不愿意", "再想想嘛", "真的不愿意吗", "那我再想想"]}
           href="/after-movie"
-          onActivate={() => setIsAccepted(true)}
+          noteTitle="这张电影票先替你留着"
+          onAccept={() => setIsAccepted(true)}
           onExitStart={onExitStart}
         />
       </motion.div>

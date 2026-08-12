@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { InvitationActions } from "@/components/InvitationActions";
 import { PageShell } from "@/components/PageShell";
-import { PositiveAction } from "@/components/PositiveAction";
 import { WalkingPath } from "@/components/WalkingPath";
 import { gentleEase } from "@/lib/motion";
 
@@ -39,12 +39,14 @@ export function AfterMovieQuestion() {
 
         <WalkingPath active={isWalking} />
 
-        <PositiveAction
-          label="好呀，去散步"
+        <InvitationActions
+          acceptLabel="好呀，去散步"
           busyLabel="一起出发"
+          declineLabels={["不可以", "再想想嘛", "真的不可以吗", "那我再想想"]}
           href="/confirmed"
           delayMs={1120}
-          onActivate={() => setIsWalking(true)}
+          noteTitle="散步的邀请先替你留着"
+          onAccept={() => setIsWalking(true)}
           onExitStart={() => setIsExiting(true)}
         />
       </motion.section>

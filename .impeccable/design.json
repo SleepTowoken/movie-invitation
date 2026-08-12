@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-12T03:00:03Z",
+  "generatedAt": "2026-08-12T03:18:00Z",
   "title": "Design System: movie-invitation",
   "extensions": {
     "colorMeta": {
@@ -132,6 +132,11 @@
         "purpose": "Hover and press acknowledgment for the positive action."
       },
       {
+        "name": "hesitation-spring",
+        "value": "spring(stiffness: 350–410, damping: 14–18)",
+        "purpose": "Elastic but bounded relocation across three safe refusal-button landings."
+      },
+      {
         "name": "reduced-motion",
         "value": "10ms or static",
         "purpose": "Collapses authored movement when reduced motion is requested."
@@ -160,6 +165,14 @@
       "description": "The one affirmative control that advances each chapter.",
       "html": "<button class=\"ds-positive-action\"><span>收下电影票</span></button>",
       "css": ".ds-positive-action { position:relative; display:inline-flex; min-width:154px; min-height:50px; overflow:hidden; align-items:center; justify-content:center; border:0; border-radius:14px; padding:.76rem 1.45rem; background:#178fdd; color:#fff; box-shadow:0 12px 30px rgba(23,143,221,.28); font-family:\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",sans-serif; font-size:.96rem; font-weight:650; letter-spacing:.08em; cursor:pointer; transition:background-color .2s,transform .2s; } .ds-positive-action::after { position:absolute; top:-70%; left:-42%; width:34%; height:240%; transform:rotate(22deg); background:rgba(255,255,255,.24); content:\"\"; transition:left 600ms cubic-bezier(.22,1,.36,1); } .ds-positive-action span { position:relative; z-index:1; } .ds-positive-action:hover { transform:translateY(-2px); background:#087fc9; } .ds-positive-action:hover::after { left:118%; } .ds-positive-action:active { transform:scale(.96); } .ds-positive-action:focus-visible { outline:2px solid #178fdd; outline-offset:4px; }"
+    },
+    {
+      "name": "Hesitation Action",
+      "kind": "button",
+      "refersTo": "button-hesitation",
+      "description": "The visible non-terminal refusal control after its final safe landing.",
+      "html": "<div class=\"ds-hesitation\"><button>那我再想想</button><p><strong>这张电影票先替你留着</strong><span>想好了，再点蓝色按钮告诉我</span></p></div>",
+      "css": ".ds-hesitation { display:grid; width:286px; gap:14px; place-items:center; font-family:\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",sans-serif; } .ds-hesitation button { min-width:154px; min-height:50px; border:1px solid rgba(74,151,192,.23); border-radius:14px; padding:.76rem 1.45rem; color:#3e6f91; background:rgba(250,252,247,.92); box-shadow:0 9px 24px rgba(36,86,122,.13); font-size:.96rem; font-weight:650; letter-spacing:.08em; cursor:pointer; transition:transform .2s,background-color .2s; } .ds-hesitation button:hover { transform:translateY(-2px); background:#fff; } .ds-hesitation button:active { transform:scale(.96); } .ds-hesitation button:focus-visible { outline:2px solid #178fdd; outline-offset:4px; } .ds-hesitation p { display:grid; gap:4px; margin:0; padding:12px 13px; border-radius:12px; color:#24567a; text-align:center; background:linear-gradient(135deg,rgba(250,252,247,.96),rgba(234,246,251,.88)); box-shadow:0 11px 28px rgba(36,86,122,.14); } .ds-hesitation strong { font-family:var(--font-noto-serif-sc),\"Songti SC\",STSong,serif; font-size:.88rem; } .ds-hesitation span { color:#3e6f91; font-size:.72rem; }"
     },
     {
       "name": "Watercolor Paper",
@@ -200,14 +213,14 @@
   ],
   "narrative": {
     "northStar": "The Island Watercolor Ticket",
-    "overview": "This system turns the supplied film poster into a small cinema keepsake. Island-sky blue fills the scene; vivid water blue carries choice and movement; gold, apricot, and pink arrive as petal-like warmth on pale paper. The poster-derived raster texture is part of the material itself, appearing in the atmosphere, envelope, correspondence, and promise ticket so the world feels painted rather than generically romantic.\n\nThe experience is a positive-only sequence: open the private invitation, accept the film, continue into a water-lit moonlit walk, then store the promise ticket. Each route is one quiet tableau, and the first viewport is reserved for a single large watercolor-blue envelope with a gold seal and one opening action.",
+    "overview": "This system turns the supplied film poster into a small cinema keepsake. Island-sky blue fills the scene; vivid water blue carries choice and movement; gold, apricot, and pink arrive as petal-like warmth on pale paper. The poster-derived raster texture is part of the material itself, appearing in the atmosphere, envelope, correspondence, and promise ticket so the world feels painted rather than generically romantic.\n\nThe experience has one positive outcome with room to hesitate: open the private invitation, play with a refusal control that never exits the scene, accept the film, continue into a water-lit moonlit walk, then store the promise ticket. Each route is one quiet tableau, and the first viewport is reserved for a single large watercolor-blue envelope with a gold seal and one opening action.",
     "keyCharacteristics": [
       "Poster-derived watercolor material across the field, envelope, papers, and ticket.",
       "Island-sky atmosphere with water-blue controls and ink.",
       "Golden petals, apricot warmth, and soft-pink haze used as small living accents.",
       "Song-style serif invitation text paired with a clear Chinese sans serif.",
       "Centered correspondence objects with soft, blue-tinted lift.",
-      "One affirmative action per chapter, ending in a stored promise ticket."
+      "One visually dominant affirmative action plus a non-terminal hesitation branch in the two question chapters."
     ],
     "rules": [
       {
@@ -258,15 +271,16 @@
     ],
     "dos": [
       "Do preserve the first viewport as one floating watercolor-blue envelope with a gold seal and the quiet “轻点开启邀请” prompt.",
-      "Do keep the sequence positive-only: open the invitation, accept the film, continue into the walk, and store the promise ticket.",
+      "Do keep the outcome positive-only while preserving the visible hesitation control on both question chapters.",
       "Do keep the supplied poster and derived watercolor raster visibly present across atmosphere, envelope, papers, and ticket.",
-      "Do use Water Blue for the single affirmative action in every chapter.",
+      "Do use Water Blue for the affirmative action and Pale Paper for the non-terminal hesitation control.",
+      "Do keep every hesitation landing inside its bounded arena and keep the final “那我再想想” control visible.",
       "Do maintain semantic buttons, visible keyboard focus, 50px touch targets, safe-area padding, and reduced-motion behavior.",
       "Do preserve the real film title, corrected poster description, fixed ticket number, and absence of an invented date."
     ],
     "donts": [
       "Don't reintroduce violet as the system color; the shipped world is island blue, water blue, gold, apricot, pink, and pale paper.",
-      "Don't add a refusal path, branching choice, or coercive joke; the canonical flow contains one positive next action.",
+      "Don't let hesitation navigate, disappear, become an actual refusal result, or silently count as acceptance.",
       "Don't turn the experience into a generic romance card with hearts, roses, red gradients, or sugary ornament.",
       "Don't replace the narrow centered tableaux with navigation, dashboard chrome, feature sections, or commercial event-page patterns.",
       "Don't flatten the world into plain gradients or generic white cards; the poster-derived watercolor material is structural.",

@@ -62,6 +62,12 @@ components:
     rounded: "{rounded.artifact}"
     padding: "0.76rem 1.45rem"
     height: "50px"
+  button-hesitation:
+    backgroundColor: "{colors.pale-paper}"
+    textColor: "{colors.island-ink-soft}"
+    rounded: "{rounded.artifact}"
+    padding: "0.76rem 1.45rem"
+    height: "50px"
   paper-card:
     backgroundColor: "{colors.pale-paper}"
     textColor: "{colors.island-ink}"
@@ -81,7 +87,7 @@ components:
 
 This system turns the supplied film poster into a small cinema keepsake. Island-sky blue fills the scene; vivid water blue carries choice and movement; gold, apricot, and pink arrive as petal-like warmth on pale paper. The poster-derived raster texture is part of the material itself, appearing in the atmosphere, envelope, correspondence, and promise ticket so the world feels painted rather than generically romantic.
 
-The experience is a positive-only sequence: open the private invitation, accept the film, continue into a water-lit moonlit walk, then store the promise ticket. Each route is one quiet tableau, and the first viewport is reserved for a single large watercolor-blue envelope with a gold seal and one opening action.
+The experience has one positive outcome with room to hesitate: open the private invitation, play with a refusal control that never exits the scene, accept the film, continue into a water-lit moonlit walk, then store the promise ticket. Each route is one quiet tableau, and the first viewport is reserved for a single large watercolor-blue envelope with a gold seal and one opening action.
 
 **Key Characteristics:**
 
@@ -90,7 +96,7 @@ The experience is a positive-only sequence: open the private invitation, accept 
 - Golden petals, apricot warmth, and soft-pink haze used as small living accents.
 - Song-style serif invitation text paired with a clear Chinese sans serif.
 - Centered correspondence objects with soft, blue-tinted lift.
-- One affirmative action per chapter, ending in a stored promise ticket.
+- One visually dominant affirmative action plus a non-terminal hesitation branch in the two question chapters.
 
 ## Colors
 
@@ -143,7 +149,7 @@ The palette is lifted from the poster: cool island water carries the structure w
 
 Every route is a centered, full-height scene on a `100svh` field with safe-area-aware vertical padding. The shell begins with `16px` horizontal padding and expands to `24px` at `640px`. The invitation and question stay within `390px`; the closing scene may expand to `520px`, while the ticket itself stays within `370px`.
 
-The closed envelope sits alone inside a `390px` stage. Opening grows the stage to `710px` on small screens and `760px` from `640px` so the letter can rise into the same composition. Short desktop viewports scale the envelope scene to `0.86`; the promise scene scales to `0.9`. The movie cover keeps a `3:4` ratio and grows from `158px` to `172px` at the small breakpoint.
+The closed envelope sits alone inside a `390px` stage. Opening grows the stage to `850px` on small screens and `880px` from `640px` so the letter and its hesitation arena can rise into the same composition. Short desktop viewports scale the envelope scene to `0.86`; the promise scene scales to `0.9`. The movie cover keeps a `3:4` ratio and grows from `158px` to `172px` at the small breakpoint.
 
 Spacing is sparse and symmetrical. Small marks use roughly `8–20px` gaps; narrative beats use roughly `24–32px`. The affirmative control remains centered, at least `154px` wide, and at least `50px` high.
 
@@ -181,12 +187,14 @@ Watercolor petals use asymmetric leaf silhouettes rather than hearts or confetti
 
 ### Buttons
 
-The affirmative button is bright, tactile, and singular.
+The affirmative button is bright and visually dominant; the pale hesitation button carries the playful secondary interaction without creating a second destination.
 
 - **Shape:** Gently squared corners (`14px`), at least `154px` wide and `50px` high, with `0.76rem 1.45rem` padding.
 - **Primary:** Water Blue with white text, strong label weight, and Action Lift.
 - **Hover / Focus:** Hover rises `2px`, deepens to Water Blue Hover, and sends a soft white sheen across the surface. Press scales to `0.96`; keyboard focus uses a `2px` Water Blue outline with a `4px` offset.
 - **Disabled:** Retains the successful busy label and uses a wait cursor while the micro-scene completes.
+- **Hesitation:** Pale Paper with Soft Island Ink, a Waterline border, and a soft blue shadow. Its four labels progress from refusal to reflection; the first three clicks land on safe alternating positions with an elastic spring and small poster-colored petals. The final label remains visible and fixed.
+- **Hesitation Note:** Later clicks unfold a compact painted-paper note for `3.6s`; it never navigates and always points back to the blue affirmative action.
 
 ### Cards / Containers
 
@@ -215,7 +223,7 @@ The closing keepsake is a notched pale-paper ticket with a blue-gold-pink waterl
 
 ### Motion
 
-The shared reveal easing is `cubic-bezier(0.22, 1, 0.36, 1)`. Page and object reveals generally run between `650ms` and `820ms`; the walk sequence extends to `1120ms` before navigation. Buttons use a spring (`stiffness: 420`, `damping: 26`). Reduced-motion preference collapses authored movement to `10ms` or static states.
+The shared reveal easing is `cubic-bezier(0.22, 1, 0.36, 1)`. Page and object reveals generally run between `650ms` and `820ms`; the walk sequence extends to `1120ms` before navigation. Primary buttons use a spring (`stiffness: 420`, `damping: 26`). Hesitation landings use a more elastic bounded spring (`stiffness: 350–410`, `damping: 14–18`) to communicate relocation. Reduced-motion preference keeps the label and note states but collapses movement to `10ms` and holds the button centered.
 
 **The Story-Motion Rule.** Motion performs the ritual—open, accept, walk, store—and does not exist as unrelated spectacle.
 
@@ -224,16 +232,17 @@ The shared reveal easing is `cubic-bezier(0.22, 1, 0.36, 1)`. Page and object re
 ### Do:
 
 - **Do** preserve the first viewport as one floating watercolor-blue envelope with a gold seal and the quiet “轻点开启邀请” prompt.
-- **Do** keep the sequence positive-only: open the invitation, accept the film, continue into the walk, and store the promise ticket.
+- **Do** keep the outcome positive-only while preserving the visible hesitation control on both question chapters.
 - **Do** keep the supplied poster and derived watercolor raster visibly present across atmosphere, envelope, papers, and ticket.
-- **Do** use Water Blue for the single affirmative action in every chapter.
+- **Do** use Water Blue for the affirmative action and Pale Paper for the non-terminal hesitation control.
+- **Do** keep every hesitation landing inside its bounded arena and keep the final “那我再想想” control visible.
 - **Do** maintain semantic buttons, visible keyboard focus, `50px` touch targets, safe-area padding, and reduced-motion behavior.
 - **Do** preserve the real film title, corrected poster description, fixed ticket number, and absence of an invented date.
 
 ### Don't:
 
 - **Don't** reintroduce violet as the system color; the shipped world is island blue, water blue, gold, apricot, pink, and pale paper.
-- **Don't** add a refusal path, branching choice, or coercive joke; the canonical flow contains one positive next action.
+- **Don't** let hesitation navigate, disappear, become an actual refusal result, or silently count as acceptance.
 - **Don't** turn the experience into a generic romance card with hearts, roses, red gradients, or sugary ornament.
 - **Don't** replace the narrow centered tableaux with navigation, dashboard chrome, feature sections, or commercial event-page patterns.
 - **Don't** flatten the world into plain gradients or generic white cards; the poster-derived watercolor material is structural.

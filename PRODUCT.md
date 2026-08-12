@@ -29,7 +29,8 @@ The link is most likely opened from a chat app on a phone. It must also work wit
 ## Capabilities and Constraints
 
 - Three routes: the envelope invitation, the after-movie question, and the confirmation.
-- The experience presents one clear positive action at each step and has no refusal path.
+- Each question presents one clear affirmative action and one playful hesitation control; hesitation never navigates, disappears, or creates a refusal outcome.
+- The hesitation control moves through three safe, elastic landings, then stays fixed and reveals a temporary note on later clicks.
 - The supplied movie artwork lives at `/public/movie-cover.png` and remains replaceable through one isolated component.
 - No backend, persistence, analytics, music, or complex UI dependencies.
 - All motion is implemented through Framer Motion.
@@ -46,7 +47,7 @@ The exact Chinese copy, interaction requirements, and real artwork for 《去你
 ## Product Principles
 
 - Make the first click feel ceremonial.
-- Keep the single next action obvious and touch-friendly.
+- Keep the affirmative next action visually dominant and every control touch-friendly.
 - Make each transition feel like a small continuation of the invitation rather than a form choice.
 - Keep the experience fast, private, and easy to replace with real artwork.
 

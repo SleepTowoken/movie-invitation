@@ -20,7 +20,7 @@ export function EnvelopeReveal() {
     >
       <section
         className={`envelope-stage relative z-10 w-full max-w-[390px] transition-[min-height] duration-700 ${
-          isOpen ? "min-h-[710px] sm:min-h-[760px]" : "min-h-[390px]"
+          isOpen ? "min-h-[850px] sm:min-h-[880px]" : "min-h-[390px]"
         }`}
         aria-label="电影邀请信"
       >
