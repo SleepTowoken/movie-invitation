@@ -179,6 +179,49 @@ button { font: inherit; }
 
 .envelope-petal-burst.is-open { opacity: 1; }
 
+.ceremony-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cascade-particle {
+  position: absolute;
+  top: 0;
+  display: block;
+  border-radius: 70% 30% 68% 32%;
+  filter: drop-shadow(0 5px 8px rgba(36, 86, 122, 0.13));
+}
+
+.cascade-night .cascade-particle {
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(92, 193, 235, 0.5);
+}
+
+.inward-gather {
+  display: grid;
+  place-items: center;
+}
+
+.inward-particle {
+  position: absolute;
+  width: 10px;
+  height: 15px;
+  border-radius: 70% 30% 68% 32%;
+  filter: drop-shadow(0 4px 8px rgba(36, 86, 122, 0.16));
+}
+
+.gather-pulse {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border: 2px solid rgba(244, 181, 47, 0.76);
+  border-radius: 50%;
+  box-shadow: 0 0 28px rgba(244, 181, 47, 0.32);
+}
+
 .choice-button {
   display: inline-flex;
   min-width: 154px;

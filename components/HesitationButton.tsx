@@ -18,15 +18,22 @@ const burstPetals = [
 ] as const;
 
 type HesitationButtonProps = {
-  labels: readonly [string, string, string, string];
+  labelPools: readonly [readonly string[], readonly string[], readonly string[], readonly string[]];
   noteTitle: string;
 };
 
+function pickGentleLabel(pool: readonly string[], previous: string) {
+  const choices = pool.filter((label) => label !== previous);
+  const source = choices.length > 0 ? choices : pool;
+  return source[Math.floor(Math.random() * source.length)] ?? previous;
+}
+
 /** A playful refusal branch: it can hesitate forever, but never navigates or disappears. */
-export function HesitationButton({ labels, noteTitle }: HesitationButtonProps) {
+export function HesitationButton({ labelPools, noteTitle }: HesitationButtonProps) {
   const prefersReducedMotion = useReducedMotion();
   const noteTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [step, setStep] = useState(0);
+  const [currentLabel, setCurrentLabel] = useState(labelPools[0][0] ?? "再想想");
   const [noteCycle, setNoteCycle] = useState(0);
   const [showNote, setShowNote] = useState(false);
 
@@ -36,6 +43,8 @@ export function HesitationButton({ labels, noteTitle }: HesitationButtonProps) {
 
   const handleClick = () => {
     if (step < safeLandings.length) {
+      const nextStep = step + 1;
+      setCurrentLabel((previous) => pickGentleLabel(labelPools[nextStep], previous));
       setStep((current) => current + 1);
       return;
     }
@@ -72,9 +81,9 @@ export function HesitationButton({ labels, noteTitle }: HesitationButtonProps) {
           variant="secondary"
           className="hesitation-action"
           onClick={handleClick}
-          aria-label={`${labels[step]}，不会离开当前页面`}
+          aria-label={`${currentLabel}，不会离开当前页面`}
         >
-          <span aria-live="polite">{labels[step]}</span>
+          <span aria-live="polite">{currentLabel}</span>
         </ActionButton>
 
         <AnimatePresence>

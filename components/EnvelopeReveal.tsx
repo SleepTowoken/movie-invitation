@@ -2,28 +2,32 @@
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { InwardGather, TopDownCascade } from "@/components/CeremonyEffects";
 import { InvitationCard } from "@/components/InvitationCard";
-import { PetalField } from "@/components/PetalField";
 import { PageShell } from "@/components/PageShell";
 import { gentleEase } from "@/lib/motion";
 
 export function EnvelopeReveal() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAccepted, setIsAccepted] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const duration = prefersReducedMotion ? 0.01 : 0.72;
 
   return (
-    <PageShell
-      exiting={isExiting}
-      className={isOpen ? "items-start sm:items-center" : "items-center"}
-    >
-      <section
-        className={`envelope-stage relative z-10 w-full max-w-[390px] transition-[min-height] duration-700 ${
-          isOpen ? "min-h-[850px] sm:min-h-[880px]" : "min-h-[390px]"
-        }`}
-        aria-label="电影邀请信"
+    <>
+      <TopDownCascade active={isOpen} variant="petal" />
+      <InwardGather active={isAccepted} />
+      <PageShell
+        exiting={isExiting}
+        className={isOpen ? "items-start sm:items-center" : "items-center"}
       >
+        <section
+          className={`envelope-stage relative z-10 w-full max-w-[390px] transition-[min-height] duration-700 ${
+            isOpen ? "min-h-[850px] sm:min-h-[880px]" : "min-h-[390px]"
+          }`}
+          aria-label="电影邀请信"
+        >
         <motion.div
           className="absolute left-1/2 top-0 w-[min(90vw,354px)] -translate-x-1/2"
           aria-hidden={!isOpen}
@@ -41,13 +45,11 @@ export function EnvelopeReveal() {
           }}
           style={{ zIndex: isOpen ? 6 : 2 }}
         >
-          <InvitationCard onExitStart={() => setIsExiting(true)} />
+          <InvitationCard
+            onAccept={() => setIsAccepted(true)}
+            onExitStart={() => setIsExiting(true)}
+          />
         </motion.div>
-
-        <PetalField
-          active={isOpen}
-          className={`envelope-petal-burst ${isOpen ? "is-open" : ""}`}
-        />
 
         <motion.div
           className="absolute left-1/2 top-[96px] h-[225px] w-[min(88vw,340px)] -translate-x-1/2 sm:top-[132px]"
@@ -116,7 +118,8 @@ export function EnvelopeReveal() {
             <span className="mx-auto mt-3 block h-7 w-px bg-gradient-to-b from-[#178fdd] to-transparent" />
           </motion.div>
         )}
-      </section>
-    </PageShell>
+        </section>
+      </PageShell>
+    </>
   );
 }

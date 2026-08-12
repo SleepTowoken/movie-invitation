@@ -30,10 +30,12 @@ The link is most likely opened from a chat app on a phone. It must also work wit
 
 - Three routes: the envelope invitation, the after-movie question, and the confirmation.
 - Each question presents one clear affirmative action and one playful hesitation control; hesitation never navigates, disappears, or creates a refusal outcome.
-- The hesitation control moves through three safe, elastic landings, then stays fixed and reveals a temporary note on later clicks.
+- The hesitation control moves through three safe, elastic landings, then stays fixed and reveals a temporary note on later clicks. Each landing draws a gentle line from a curated stage-specific pool without immediately repeating the visible copy.
 - The supplied movie artwork lives at `/public/movie-cover.png` and remains replaceable through one isolated component.
 - No backend, persistence, analytics, music, or complex UI dependencies.
 - All motion is implemented through Framer Motion.
+- Opening the letter and accepting the walk release a sparse top-to-bottom watercolor shower; accepting the movie ticket and storing the keepsake gather poster-colored fragments from all four edges into the center.
+- All ceremony effects are one-shot, pointer-transparent, deterministic in position, and removed when reduced motion is requested.
 - The closing ticket uses a fixed decorative ticket number and does not invent a date.
 
 ## Brand Commitments

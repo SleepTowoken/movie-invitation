@@ -7,11 +7,12 @@ import { MovieCover } from "@/components/MovieCover";
 import { gentleEase } from "@/lib/motion";
 
 type InvitationCardProps = {
+  onAccept?: () => void;
   onExitStart: () => void;
   reveal?: boolean;
 };
 
-export function InvitationCard({ onExitStart, reveal = true }: InvitationCardProps) {
+export function InvitationCard({ onAccept, onExitStart, reveal = true }: InvitationCardProps) {
   const prefersReducedMotion = useReducedMotion();
   const [isAccepted, setIsAccepted] = useState(false);
 
@@ -65,10 +66,18 @@ export function InvitationCard({ onExitStart, reveal = true }: InvitationCardPro
         <InvitationActions
           acceptLabel="收下电影票"
           busyLabel="已收下"
-          declineLabels={["不愿意", "再想想嘛", "真的不愿意吗", "那我再想想"]}
+          declineLabelPools={[
+            ["不愿意"],
+            ["让我再想想", "先犹豫一下", "再给我一点时间"],
+            ["好像有点心动", "要不再问一次", "差一点就答应啦"],
+            ["那我再想想", "电影票先留着", "让我认真想想"],
+          ]}
           href="/after-movie"
           noteTitle="这张电影票先替你留着"
-          onAccept={() => setIsAccepted(true)}
+          onAccept={() => {
+            setIsAccepted(true);
+            onAccept?.();
+          }}
           onExitStart={onExitStart}
         />
       </motion.div>

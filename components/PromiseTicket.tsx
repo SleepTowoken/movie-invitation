@@ -27,39 +27,12 @@ function CheckMark() {
   );
 }
 
-const gatheringPetals = [
-  { x: -132, y: -128, tone: "gold" },
-  { x: 126, y: -94, tone: "pink" },
-  { x: -114, y: 72, tone: "blue" },
-  { x: 132, y: 94, tone: "apricot" },
-  { x: 2, y: -158, tone: "gold" },
-] as const;
-
 /** The closing keepsake: a compact promise ticket that can be folded away. */
 export function PromiseTicket({ stored, onStore }: PromiseTicketProps) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
     <div className="promise-scene">
-      {gatheringPetals.map((petal, index) => (
-        <motion.span
-          key={`${petal.x}-${petal.y}`}
-          className={`gathering-petal petal-${petal.tone}`}
-          initial={false}
-          animate={
-            stored
-              ? { x: 0, y: 172, opacity: 0, scale: 0.35, rotate: 120 }
-              : { x: petal.x, y: petal.y, opacity: 0.56, rotate: index * 34 }
-          }
-          transition={{
-            duration: prefersReducedMotion ? 0.01 : 0.86,
-            delay: prefersReducedMotion ? 0 : index * 0.045,
-            ease: gentleEase,
-          }}
-          aria-hidden="true"
-        />
-      ))}
-
       <AnimatePresence mode="wait">
         {!stored ? (
           <motion.div

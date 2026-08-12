@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-12T03:18:00Z",
+  "generatedAt": "2026-08-12T03:30:00Z",
   "title": "Design System: movie-invitation",
   "extensions": {
     "colorMeta": {
@@ -137,6 +137,16 @@
         "purpose": "Elastic but bounded relocation across three safe refusal-button landings."
       },
       {
+        "name": "top-cascade",
+        "value": "1220ms–1580ms",
+        "purpose": "Sparse poster petals or night lights travel from the top through the viewport at opening and departure."
+      },
+      {
+        "name": "inward-gather",
+        "value": "820ms",
+        "purpose": "Poster-colored fragments converge from all four viewport edges when a promise is accepted or stored."
+      },
+      {
         "name": "reduced-motion",
         "value": "10ms or static",
         "purpose": "Collapses authored movement when reduced motion is requested."
@@ -170,7 +180,7 @@
       "name": "Hesitation Action",
       "kind": "button",
       "refersTo": "button-hesitation",
-      "description": "The visible non-terminal refusal control after its final safe landing.",
+      "description": "The visible non-terminal hesitation control; each stage selects harmonious copy from a curated pool without adjacent repetition, and its final landing remains available.",
       "html": "<div class=\"ds-hesitation\"><button>那我再想想</button><p><strong>这张电影票先替你留着</strong><span>想好了，再点蓝色按钮告诉我</span></p></div>",
       "css": ".ds-hesitation { display:grid; width:286px; gap:14px; place-items:center; font-family:\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",sans-serif; } .ds-hesitation button { min-width:154px; min-height:50px; border:1px solid rgba(74,151,192,.23); border-radius:14px; padding:.76rem 1.45rem; color:#3e6f91; background:rgba(250,252,247,.92); box-shadow:0 9px 24px rgba(36,86,122,.13); font-size:.96rem; font-weight:650; letter-spacing:.08em; cursor:pointer; transition:transform .2s,background-color .2s; } .ds-hesitation button:hover { transform:translateY(-2px); background:#fff; } .ds-hesitation button:active { transform:scale(.96); } .ds-hesitation button:focus-visible { outline:2px solid #178fdd; outline-offset:4px; } .ds-hesitation p { display:grid; gap:4px; margin:0; padding:12px 13px; border-radius:12px; color:#24567a; text-align:center; background:linear-gradient(135deg,rgba(250,252,247,.96),rgba(234,246,251,.88)); box-shadow:0 11px 28px rgba(36,86,122,.14); } .ds-hesitation strong { font-family:var(--font-noto-serif-sc),\"Songti SC\",STSong,serif; font-size:.88rem; } .ds-hesitation span { color:#3e6f91; font-size:.72rem; }"
     },
@@ -274,7 +284,9 @@
       "Do keep the outcome positive-only while preserving the visible hesitation control on both question chapters.",
       "Do keep the supplied poster and derived watercolor raster visibly present across atmosphere, envelope, papers, and ticket.",
       "Do use Water Blue for the affirmative action and Pale Paper for the non-terminal hesitation control.",
-      "Do keep every hesitation landing inside its bounded arena and keep the final “那我再想想” control visible.",
+      "Do keep every hesitation landing inside its bounded arena and keep the final selected hesitation control visible.",
+      "Do keep random hesitation copy inside the reviewed stage pools and prevent adjacent repetition.",
+      "Do reserve top-down showers for opening or departure, and four-edge gathers for affirmative acceptance or storing.",
       "Do maintain semantic buttons, visible keyboard focus, 50px touch targets, safe-area padding, and reduced-motion behavior.",
       "Do preserve the real film title, corrected poster description, fixed ticket number, and absence of an invented date."
     ],

@@ -4,7 +4,7 @@ import { PositiveAction } from "@/components/PositiveAction";
 type InvitationActionsProps = {
   acceptLabel: string;
   busyLabel: string;
-  declineLabels: readonly [string, string, string, string];
+  declineLabelPools: readonly [readonly string[], readonly string[], readonly string[], readonly string[]];
   href: "/after-movie" | "/confirmed";
   noteTitle: string;
   delayMs?: number;
@@ -16,7 +16,7 @@ type InvitationActionsProps = {
 export function InvitationActions({
   acceptLabel,
   busyLabel,
-  declineLabels,
+  declineLabelPools,
   href,
   noteTitle,
   delayMs,
@@ -33,7 +33,7 @@ export function InvitationActions({
         onActivate={onAccept}
         onExitStart={onExitStart}
       />
-      <HesitationButton labels={declineLabels} noteTitle={noteTitle} />
+      <HesitationButton labelPools={declineLabelPools} noteTitle={noteTitle} />
     </div>
   );
 }

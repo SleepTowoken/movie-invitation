@@ -193,7 +193,7 @@ The affirmative button is bright and visually dominant; the pale hesitation butt
 - **Primary:** Water Blue with white text, strong label weight, and Action Lift.
 - **Hover / Focus:** Hover rises `2px`, deepens to Water Blue Hover, and sends a soft white sheen across the surface. Press scales to `0.96`; keyboard focus uses a `2px` Water Blue outline with a `4px` offset.
 - **Disabled:** Retains the successful busy label and uses a wait cursor while the micro-scene completes.
-- **Hesitation:** Pale Paper with Soft Island Ink, a Waterline border, and a soft blue shadow. Its four labels progress from refusal to reflection; the first three clicks land on safe alternating positions with an elastic spring and small poster-colored petals. The final label remains visible and fixed.
+- **Hesitation:** Pale Paper with Soft Island Ink, a Waterline border, and a soft blue shadow. Its four stages progress from refusal to reflection; stages two through four select from curated, gentle copy pools without adjacent repetition. The first three clicks land on safe alternating positions with an elastic spring and small poster-colored petals. The final selected label remains visible and fixed.
 - **Hesitation Note:** Later clicks unfold a compact painted-paper note for `3.6s`; it never navigates and always points back to the blue affirmative action.
 
 ### Cards / Containers
@@ -223,7 +223,7 @@ The closing keepsake is a notched pale-paper ticket with a blue-gold-pink waterl
 
 ### Motion
 
-The shared reveal easing is `cubic-bezier(0.22, 1, 0.36, 1)`. Page and object reveals generally run between `650ms` and `820ms`; the walk sequence extends to `1120ms` before navigation. Primary buttons use a spring (`stiffness: 420`, `damping: 26`). Hesitation landings use a more elastic bounded spring (`stiffness: 350–410`, `damping: 14–18`) to communicate relocation. Reduced-motion preference keeps the label and note states but collapses movement to `10ms` and holds the button centered.
+The shared reveal easing is `cubic-bezier(0.22, 1, 0.36, 1)`. Page and object reveals generally run between `650ms` and `820ms`; the walk sequence extends to `1120ms` before navigation. Primary buttons use a spring (`stiffness: 420`, `damping: 26`). Hesitation landings use a more elastic bounded spring (`stiffness: 350–410`, `damping: 14–18`) to communicate relocation. A sparse top cascade (`1220–1580ms`) marks opening and departure; a four-edge gather (`820ms`) marks acceptance and storing. These fixed, pointer-transparent ceremony layers sit above page blur so the scene change remains legible. Reduced-motion preference keeps the label and note states but removes ceremony particles, collapses movement to `10ms`, and holds the button centered.
 
 **The Story-Motion Rule.** Motion performs the ritual—open, accept, walk, store—and does not exist as unrelated spectacle.
 
@@ -235,7 +235,9 @@ The shared reveal easing is `cubic-bezier(0.22, 1, 0.36, 1)`. Page and object re
 - **Do** keep the outcome positive-only while preserving the visible hesitation control on both question chapters.
 - **Do** keep the supplied poster and derived watercolor raster visibly present across atmosphere, envelope, papers, and ticket.
 - **Do** use Water Blue for the affirmative action and Pale Paper for the non-terminal hesitation control.
-- **Do** keep every hesitation landing inside its bounded arena and keep the final “那我再想想” control visible.
+- **Do** keep every hesitation landing inside its bounded arena and keep the final selected hesitation control visible.
+- **Do** keep random hesitation copy inside the reviewed stage pools and prevent adjacent repetition.
+- **Do** reserve top-down showers for opening or departure, and four-edge gathers for affirmative acceptance or storing.
 - **Do** maintain semantic buttons, visible keyboard focus, `50px` touch targets, safe-area padding, and reduced-motion behavior.
 - **Do** preserve the real film title, corrected poster description, fixed ticket number, and absence of an invented date.
 
