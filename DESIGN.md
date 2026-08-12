@@ -1,22 +1,29 @@
 ---
 name: movie-invitation
-description: A private cinema invitation told as quiet, tactile correspondence.
+description: A poster-led watercolor cinema keepsake told through an envelope, pale paper, and a promise ticket.
 colors:
-  violet-ink: "#303954"
-  violet-ink-soft: "#69738f"
-  action-violet: "#5865a8"
-  action-violet-hover: "#4d599a"
-  mist-paper-field: "#eef3ff"
-  lavender-haze: "#eeeafd"
-  letter-paper: "#fbfcff"
-  envelope-blue: "#cbd6f3"
-  correspondence-line: "#aeb6d1"
+  island-ink: "#24567a"
+  island-ink-soft: "#3e6f91"
+  island-sky: "#eaf6fb"
+  water-blue: "#178fdd"
+  water-blue-hover: "#087fc9"
+  pale-paper: "#fafcf7"
+  petal-gold: "#f4b52f"
+  apricot-warmth: "#f58b42"
+  pink-haze: "#e8a9c1"
+  waterline: "#8ecbec"
 typography:
   display:
     fontFamily: "var(--font-noto-serif-sc), Songti SC, STSong, serif"
     fontSize: "clamp(1.72rem, 5.5vw, 2.75rem)"
     fontWeight: 500
     lineHeight: 1.42
+    letterSpacing: "-0.025em"
+  headline:
+    fontFamily: "var(--font-noto-serif-sc), Songti SC, STSong, serif"
+    fontSize: "clamp(2rem, 8vw, 2.3rem)"
+    fontWeight: 600
+    lineHeight: 1.35
     letterSpacing: "-0.025em"
   body:
     fontFamily: "PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"
@@ -26,204 +33,208 @@ typography:
     letterSpacing: "normal"
   label:
     fontFamily: "PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"
-    fontSize: "0.875rem"
-    fontWeight: 400
+    fontSize: "0.96rem"
+    fontWeight: 650
     lineHeight: 1.5
-    letterSpacing: "0.16em"
+    letterSpacing: "0.08em"
 rounded:
-  mark: "7px"
   paper-inset: "11px"
-  cover: "14px"
+  artifact: "14px"
   paper: "16px"
   full: "999px"
 spacing:
-  touch-edge: "16px"
-  page-x: "16px"
   paper-inset: "7px"
+  page-x: "16px"
+  page-x-wide: "24px"
   paper-x: "24px"
   paper-y: "28px"
   safe-y: "max(24px, env(safe-area-inset-top))"
 components:
   button-primary:
-    backgroundColor: "{colors.action-violet}"
+    backgroundColor: "{colors.water-blue}"
     textColor: "#ffffff"
-    rounded: "{rounded.cover}"
-    padding: "0.72rem 1.2rem"
-    height: "48px"
+    rounded: "{rounded.artifact}"
+    padding: "0.76rem 1.45rem"
+    height: "50px"
   button-primary-hover:
-    backgroundColor: "{colors.action-violet-hover}"
+    backgroundColor: "{colors.water-blue-hover}"
     textColor: "#ffffff"
-    rounded: "{rounded.cover}"
-    padding: "0.72rem 1.2rem"
-    height: "48px"
-  button-secondary:
-    backgroundColor: "rgba(255, 255, 255, 0.72)"
-    textColor: "#59617b"
-    rounded: "{rounded.cover}"
-    padding: "0.72rem 1.2rem"
-    height: "48px"
-  letter-paper:
-    backgroundColor: "{colors.letter-paper}"
-    textColor: "{colors.violet-ink}"
+    rounded: "{rounded.artifact}"
+    padding: "0.76rem 1.45rem"
+    height: "50px"
+  paper-card:
+    backgroundColor: "{colors.pale-paper}"
+    textColor: "{colors.island-ink}"
     rounded: "{rounded.paper}"
     padding: "28px 24px"
   movie-cover:
-    backgroundColor: "#dce5fa"
-    rounded: "{rounded.cover}"
-    width: "138px"
+    backgroundColor: "#ccebf7"
+    rounded: "{rounded.artifact}"
+    width: "158px"
 ---
 
 # Design System: movie-invitation
 
 ## Overview
 
-**Creative North Star: "The Private Cinema Letter"**
+**Creative North Star: "The Island Watercolor Ticket"**
 
-This system makes a personal invitation feel like cinematic correspondence discovered in a quiet, self-contained world. Mist-blue paper, violet ink, and exact envelope construction make the interaction ceremonial without turning it into a generic romantic card. The mood is gentle, minimal, and refined; intimacy comes from restraint, sequence, and material detail rather than hearts, roses, or decorative sentimentality.
+This system turns the supplied film poster into a small cinema keepsake. Island-sky blue fills the scene; vivid water blue carries choice and movement; gold, apricot, and pink arrive as petal-like warmth on pale paper. The poster-derived raster texture is part of the material itself, appearing in the atmosphere, envelope, correspondence, and promise ticket so the world feels painted rather than generically romantic.
 
-The experience follows one small narrative arc: open the sealed letter, choose the movie, ask to walk home, and remember the promise. Its first viewport belongs to one floating sealed envelope and a quiet prompt. Later surfaces retain the same paper, ink, ticket, and film vocabulary so the three routes read as chapters of one correspondence.
+The experience is a positive-only sequence: open the private invitation, accept the film, continue into a water-lit moonlit walk, then store the promise ticket. Each route is one quiet tableau, and the first viewport is reserved for a single large watercolor-blue envelope with a gold seal and one opening action.
 
 **Key Characteristics:**
 
-- Mist-blue and pale-violet atmosphere with white paper at the center.
-- Violet-blue ink instead of black, pink, or red.
-- Song-style serif display text paired with a restrained Chinese sans serif.
-- Precise envelope folds, inset rules, diamonds, film perforations, and hairline marks.
-- Soft ambient depth and slow, purposeful reveals.
-- One obvious affirmative action with a playful, non-coercive refusal interaction.
+- Poster-derived watercolor material across the field, envelope, papers, and ticket.
+- Island-sky atmosphere with water-blue controls and ink.
+- Golden petals, apricot warmth, and soft-pink haze used as small living accents.
+- Song-style serif invitation text paired with a clear Chinese sans serif.
+- Centered correspondence objects with soft, blue-tinted lift.
+- One affirmative action per chapter, ending in a stored promise ticket.
 
 ## Colors
 
-The palette behaves like cool stationery under projector light: low-contrast atmospheric fields support crisp violet-blue correspondence marks and a single stronger action color.
+The palette is lifted from the poster: cool island water carries the structure while sunlit floral colors appear in small, memorable gestures.
 
 ### Primary
 
-- **Action Violet:** The affirmative choice, seal family, and interactive emphasis. Its deeper hover partner confirms intent without changing the restrained tone.
+- **Water Blue:** The only strong action color, used for affirmative controls, focus treatment, checks, walking light, and the most active water marks.
+- **Island Ink:** The main text and graphic color; it keeps reading gentle while remaining distinct against pale paper and sky.
 
 ### Secondary
 
-- **Envelope Blue:** The material base for the envelope back and the starting point for its layered pale-blue folds.
-- **Lavender Haze:** The violet edge of page gradients and ambient light, used as atmosphere rather than decoration.
+- **Petal Gold:** The envelope seal, ticket stripe, diamonds, petals, and small moments of promise.
+- **Apricot Warmth:** Acceptance stamp, farewell accents, and warmer petals.
+- **Pink Haze:** Ambient watercolor bloom, ticket stripe, and sparse petal accents.
 
 ### Neutral
 
-- **Violet Ink:** Display copy, film marks, and the strongest editorial details; it replaces pure black throughout the correspondence.
-- **Soft Violet Ink:** Supporting prose and quiet labels, preserving hierarchy without washing out readability.
-- **Mist Paper Field:** The global canvas and browser background.
-- **Letter Paper:** The near-white reading surface for invitations and questions.
-- **Correspondence Line:** Fine paper corners, borders, and measured graphic marks.
+- **Island Sky:** The global field and focus-ring offset surface.
+- **Pale Paper:** The invitation, question, and promise-ticket material.
+- **Soft Island Ink:** Supporting prose, scene labels, and quieter metadata.
+- **Waterline:** Hairlines, paper corners, and correspondence dividers.
 
 ### Named Rules
 
-**The Violet-Ink Rule.** Use violet-blue ink for text and marks; pure black does not belong in this paper world.
+**The Poster-Palette Rule.** Blue owns the field and action; gold, apricot, and pink punctuate it as petals and keepsake details, never as a generic romance gradient.
 
-**The Atmosphere Rule.** Pale blue and lavender may spread across the field, but saturated color remains concentrated in the seal and affirmative action.
+**The Water-Blue Action Rule.** Every chapter advances through the same vivid blue affirmative control.
 
 ## Typography
 
 **Display Font:** Noto Serif SC with Songti SC, STSong, and serif fallbacks  
 **Body Font:** PingFang SC with Hiragino Sans GB, Microsoft YaHei, and sans-serif fallbacks
 
-**Character:** The serif carries the emotional weight of a personal letter and film title. The sans serif keeps prompts, explanations, and buttons contemporary, legible, and unembarrassed.
+**Character:** The serif gives the invitation and promise the gravity of a handwritten film keepsake. The sans serif handles prompts, supporting sentences, ticket metadata, and actions with clean contemporary legibility.
 
 ### Hierarchy
 
-- **Display** (500, `clamp(1.72rem, 5.5vw, 2.75rem)`, 1.42): Invitation, question, and confirmation headlines; use compact negative tracking around `-0.025em` to `-0.03em`.
-- **Title** (400, `1.12rem`, normal): Film-title notation inside the letter, with slight positive tracking (`0.04em`).
-- **Body** (400, `0.94rem` to `1rem`, 1.75): Brief supporting sentences, held to a compact measure of about `18rem` where present.
-- **Label** (400–600, `0.875rem` to `0.96rem`, `0.08em` to `0.18em`): Quiet prompts and touch actions; Chinese copy stays in natural case.
+- **Display** (500, fluid from `1.72rem`, 1.42): The invitation headline and film title, set with compact negative tracking.
+- **Headline** (500–600, fluid around `2rem` to `2.3rem`, 1.35–1.5): The walk question, promise, and stored confirmation.
+- **Title** (400, `1.12rem` to `1.15rem`): Film-title notation on paper and ticket, with slight positive tracking.
+- **Body** (400, `0.94rem` to `1rem`, 1.75): Brief supporting copy held to a compact reading measure.
+- **Label** (400–650, `0.7rem` to `0.96rem`, `0.08em` to `0.18em`): Opening prompts, ticket numbers, scene labels, promise rows, and actions.
 
 ### Named Rules
 
-**The Correspondence Hierarchy Rule.** Serif type speaks the invitation; sans-serif type handles guidance and choice.
+**The Keepsake Hierarchy Rule.** Serif type carries invitation and promise; sans-serif type carries direction, context, and action.
 
 ## Layout
 
-Each route is a full-height, centered scene on a `min-height: 100svh` field. The page shell uses `16px` horizontal padding on small screens, `24px` from the `640px` breakpoint, and vertical padding of at least `24px` plus the top safe area. Content remains deliberately narrow: the envelope, invitation, and question top out at `390px`; the finale expands only to `520px`.
+Every route is a centered, full-height scene on a `100svh` field with safe-area-aware vertical padding. The shell begins with `16px` horizontal padding and expands to `24px` at `640px`. The invitation and question stay within `390px`; the closing scene may expand to `520px`, while the ticket itself stays within `370px`.
 
-The first closed state is an envelope stage with a `390px` minimum height. Opening expands the stage to `680px` on small screens and `720px` from `640px`, allowing the letter to rise without breaking the single-scene composition. On desktop viewports shorter than `720px`, the envelope stage scales to `0.88` from its top center. The movie cover holds a `3:4` ratio and grows from `138px` to `154px` at the same breakpoint.
+The closed envelope sits alone inside a `390px` stage. Opening grows the stage to `710px` on small screens and `760px` from `640px` so the letter can rise into the same composition. Short desktop viewports scale the envelope scene to `0.86`; the promise scene scales to `0.9`. The movie cover keeps a `3:4` ratio and grows from `158px` to `172px` at the small breakpoint.
 
-Spacing is centered, symmetrical, and sparse. Repeated gaps of roughly `12–20px` organize small marks and controls; `28–40px` intervals separate narrative beats. Choice buttons stay in one centered row with a minimum `48px` touch height.
+Spacing is sparse and symmetrical. Small marks use roughly `8–20px` gaps; narrative beats use roughly `24–32px`. The affirmative control remains centered, at least `154px` wide, and at least `50px` high.
 
-**The One-Scene Rule.** Every route reads as one centered cinematic tableau, never as a conventional stacked landing page.
+**The One-Tableau Rule.** Each route reads as a single piece of cinematic correspondence, never as a landing-page stack or an app screen.
+
+**The Sealed-First Rule.** Before opening, the envelope and its quiet prompt are the only content and action in the viewport.
 
 ## Elevation & Depth
 
-Depth is ambient and material rather than glossy. The page field uses layered radial and linear gradients plus a faint six-pixel dot grain. Paper lifts with a broad cool shadow; the envelope sits slightly deeper; buttons use smaller responsive shadows. Blur halos and translucent ambient circles suggest projector light without introducing literal scenery.
+Depth combines real poster-derived raster material with translucent watercolor gradients, clipped paper forms, and cool ambient shadows. The result should feel like painted paper floating over an island-sky wash. It is neither flat UI nor glossy glass.
 
 ### Shadow Vocabulary
 
-- **Paper Lift** (`0 24px 62px rgba(68, 77, 124, 0.2)`): Invitation and question paper floating above the field.
-- **Envelope Lift** (`0 28px 54px rgba(61, 70, 119, 0.24)`): The sealed envelope as the first-viewport focal object.
-- **Cover Lift** (`0 14px 34px rgba(58, 67, 110, 0.22)`): The replaceable movie artwork inside the letter.
-- **Action Lift** (`0 12px 28px rgba(67, 76, 139, 0.24)`): Affirmative buttons; navigation briefly blooms to a softer violet shadow.
-- **Quiet Control Lift** (`0 9px 24px rgba(80, 91, 141, 0.11)`): Secondary choice at rest.
+- **Paper Lift** (`0 26px 64px rgba(36, 86, 122, 0.20), 0 4px 12px rgba(36, 86, 122, 0.08)`): Invitation and question paper.
+- **Ticket Lift** (`0 28px 68px rgba(36, 86, 122, 0.22), 0 5px 14px rgba(36, 86, 122, 0.09)`): The closing keepsake.
+- **Envelope Lift** (`0 29px 56px rgba(26, 111, 158, 0.25)`): The first-viewport focal object.
+- **Poster Lift** (`0 17px 38px rgba(25, 116, 165, 0.27), 0 4px 10px rgba(244, 181, 47, 0.16)`): The supplied movie artwork.
+- **Action Lift** (`0 12px 30px rgba(23, 143, 221, 0.28)`): The affirmative control.
 
 ### Named Rules
 
-**The Projector-Light Rule.** Shadows stay cool, diffuse, and low-opacity; depth should feel like paper in soft light, never like a glossy app card.
+**The Painted-Material Rule.** Poster texture must remain visibly integrated with atmosphere and correspondence surfaces; gradients alone are not the visual world.
+
+**The Blue-Shadow Rule.** Shadows are diffuse and water-tinted, with occasional gold warmth around poster or seal details.
 
 ## Shapes
 
-The dominant silhouette is the precisely folded envelope: triangular flap and pocket planes, a circular seal, and a slightly rounded lower edge. Reading surfaces use a restrained `16px` outer radius with an inset `11px` hairline frame. Covers and controls use a related `14px` radius; full circles are reserved for the seal, projector halo, particles, and ambient light.
+The form language is soft but specific: `16px` paper corners, `14px` controls and poster frames, an `11px` inset paper rule, and full circles for the gold seal and promise checks. The envelope is constructed from crisp polygonal folds; the promise ticket adds paired circular notches and a three-color waterline.
 
-Small geometry carries the cinema-letter identity: rotated squares become wax-seal marks, ticket dots, and dividers; film marks use a `7px` rectangle with tiny perforations. These details are thin, measured, and centered.
+Watercolor petals use asymmetric leaf silhouettes rather than hearts or confetti. Diamonds, hairlines, footprints, dashed promise rules, and ticket notches provide the small geometry of cinema correspondence.
 
-**The Precise Geometry Rule.** Use folds, hairlines, diamonds, and film perforations as correspondence marks; avoid loose blobs or novelty romance icons.
+**The Petal-Not-Heart Rule.** Romance is expressed through poster-derived petals, water, paper, and sequence—never through stock heart iconography.
 
 ## Components
 
 ### Buttons
 
-Buttons feel calm and touchable, with a slight upward acknowledgment rather than a loud transformation.
+The affirmative button is bright, tactile, and singular.
 
-- **Shape:** Gently squared corners (`14px`), at least `104px` wide and `48px` high, with `0.72rem 1.2rem` internal padding.
-- **Primary:** Action Violet with white text and the Action Lift shadow.
-- **Hover / Focus:** Hover rises `2px` and deepens the violet; press scales to `0.96`. Keyboard focus uses a `2px` violet outline with a `4px` offset.
-- **Secondary:** Translucent white with soft violet text and the Quiet Control Lift shadow; hover resolves to opaque white.
-- **Playful refusal:** The negative choice becomes fixed after activation and relocates within the middle `20–80%` of the visible viewport, keeping `16px` edge clearance and avoiding the positive action by `22px`.
+- **Shape:** Gently squared corners (`14px`), at least `154px` wide and `50px` high, with `0.76rem 1.45rem` padding.
+- **Primary:** Water Blue with white text, strong label weight, and Action Lift.
+- **Hover / Focus:** Hover rises `2px`, deepens to Water Blue Hover, and sends a soft white sheen across the surface. Press scales to `0.96`; keyboard focus uses a `2px` Water Blue outline with a `4px` offset.
+- **Disabled:** Retains the successful busy label and uses a wait cursor while the micro-scene completes.
 
 ### Cards / Containers
 
-Invitation and question papers are compact pieces of correspondence rather than generic cards.
+The invitation, walk question, and promise ticket are painted paper artifacts rather than generic cards.
 
-- **Corner Style:** Restrained paper corners (`16px`) with an inset frame (`11px` radius, `7px` inset).
-- **Background:** A near-white diagonal paper wash over Letter Paper.
-- **Shadow Strategy:** Paper Lift only; no border-heavy card chrome.
-- **Internal Padding:** Approximately `24–32px` horizontally and `28–56px` vertically according to content density.
+- **Corner Style:** Soft paper corners (`16px`); invitation and question include a fine inset frame (`7px` inset, `11px` radius).
+- **Background:** Pale Paper layered with the poster-derived watercolor texture, translucent paper wash, and a small golden bloom.
+- **Shadow Strategy:** Paper Lift for invitation and question; the deeper Ticket Lift for the closing keepsake.
+- **Internal Padding:** Approximately `24–32px` horizontally and `28–56px` vertically, matched to the density of each chapter.
 
 ### Movie Cover
 
-The cover is a replaceable `3:4` image framed as the letter's cinematic artifact. It uses a cool-blue fallback, a `14px` radius, Cover Lift, and a restrained vertical glaze. On hover, the image scales only to `1.025` over `700ms`.
+The supplied poster is the visual source and the cinematic artifact inside the letter. It stays replaceable through the isolated cover component, uses a `3:4` ratio, a `14px` radius, Poster Lift, and a restrained blue glaze. Hover scales the image only to `1.025` over `700ms`.
 
 ### Sealed Envelope
 
-The signature first-view component is a `340px`-wide envelope built from exact polygonal folds. Its blue layers deepen from flap to pocket, and a `48px` circular violet seal pulses subtly until opened. Keyboard focus rings the entire envelope. Opening rotates the flap in 3D, lets the envelope recede, and raises the letter into view.
+The signature opener is a large blue envelope built from layered watercolor texture, translucent sky-to-water gradients, precise folded polygons, and a `48px` gold seal. The whole envelope is the semantic button. Opening rotates the flap in 3D, releases a small petal burst, lowers the envelope, and raises the invitation paper.
 
-### Finale Mark
+### Walking Path
 
-The confirmation replaces paper with a `96px` circular projector halo and a small outlined film frame. Sparse stars and dots drift around the scene; the headline, promise, and diamond divider enter in a measured sequence.
+The second chapter bridges choice to promise with four alternating blue footprints over a soft water shimmer. Gold heels and occasional pink toe marks carry the poster palette into the moonlit walk without adding literal scenery.
+
+### Promise Ticket
+
+The closing keepsake is a notched pale-paper ticket with a blue-gold-pink waterline, fixed commemorative number, two checked promises, and one blue “store” action. Activating it folds the ticket downward into a small sealed envelope, gathers the surrounding petals, and replaces it with the stored confirmation.
 
 ### Motion
 
-The shared reveal easing is `cubic-bezier(0.22, 1, 0.36, 1)`. Page entry lasts `700ms` with a small blur and `10px` rise; page exit lasts `400ms`. The envelope reveal unfolds across roughly `480–720ms`. Interactive buttons use a spring (`stiffness: 420`, `damping: 26`), while the relocated refusal uses a softer spring (`stiffness: 230`, `damping: 24`, `mass: 0.82`). Reduced-motion preference collapses authored movement to `10ms` or static states.
+The shared reveal easing is `cubic-bezier(0.22, 1, 0.36, 1)`. Page and object reveals generally run between `650ms` and `820ms`; the walk sequence extends to `1120ms` before navigation. Buttons use a spring (`stiffness: 420`, `damping: 26`). Reduced-motion preference collapses authored movement to `10ms` or static states.
 
-**The Ceremonial Motion Rule.** Motion reveals the sequence—open, choose, walk home, remember—and never runs as unrelated decoration.
+**The Story-Motion Rule.** Motion performs the ritual—open, accept, walk, store—and does not exist as unrelated spectacle.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** preserve the first viewport as one floating sealed envelope with the quiet “轻点开启邀请” prompt.
-- **Do** keep the three-route story legible as open, choose, walk home, remember.
-- **Do** use cool paper gradients, violet ink, precise envelope construction, and small cinematic marks as the recurring visual language.
-- **Do** maintain keyboard focus, `48px` touch targets, safe-area padding, and reduced-motion behavior.
-- **Do** keep supplied copy and real artwork replaceable without redesigning the surrounding correspondence.
+- **Do** preserve the first viewport as one floating watercolor-blue envelope with a gold seal and the quiet “轻点开启邀请” prompt.
+- **Do** keep the sequence positive-only: open the invitation, accept the film, continue into the walk, and store the promise ticket.
+- **Do** keep the supplied poster and derived watercolor raster visibly present across atmosphere, envelope, papers, and ticket.
+- **Do** use Water Blue for the single affirmative action in every chapter.
+- **Do** maintain semantic buttons, visible keyboard focus, `50px` touch targets, safe-area padding, and reduced-motion behavior.
+- **Do** preserve the real film title, corrected poster description, fixed ticket number, and absence of an invented date.
 
 ### Don't:
 
-- **Don't** turn the experience into a generic romance template with hearts, roses, red-pink gradients, or sugary decorative copy.
-- **Don't** replace the narrow, centered tableau with dashboard chrome, navigation, feature sections, or commercial event-page patterns.
-- **Don't** add visual noise around the envelope; its isolation is what makes the first click ceremonial.
-- **Don't** use harsh black, hard gray shadows, glass panels, or high-saturation accents that break the mist-blue paper world.
-- **Don't** make the playful refusal unsafe: it must remain visible, keyboard-operable, within viewport edges, and clear of the affirmative action.
+- **Don't** reintroduce violet as the system color; the shipped world is island blue, water blue, gold, apricot, pink, and pale paper.
+- **Don't** add a refusal path, branching choice, or coercive joke; the canonical flow contains one positive next action.
+- **Don't** turn the experience into a generic romance card with hearts, roses, red gradients, or sugary ornament.
+- **Don't** replace the narrow centered tableaux with navigation, dashboard chrome, feature sections, or commercial event-page patterns.
+- **Don't** flatten the world into plain gradients or generic white cards; the poster-derived watercolor material is structural.
+- **Don't** add visual noise around the closed envelope; its isolation makes the opening ceremonial.

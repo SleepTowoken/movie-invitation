@@ -1,180 +1,276 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-10T07:10:07Z",
+  "generatedAt": "2026-08-12T03:00:03Z",
   "title": "Design System: movie-invitation",
   "extensions": {
     "colorMeta": {
-      "violet-ink": {
+      "island-ink": {
         "role": "primary",
-        "displayName": "Violet Ink",
-        "canonical": "#303954",
-        "tonalRamp": ["oklch(15% 0.045 270)", "oklch(27% 0.045 270)", "oklch(39% 0.045 270)", "oklch(51% 0.045 270)", "oklch(63% 0.045 270)", "oklch(75% 0.045 270)", "oklch(87% 0.045 270)", "oklch(95% 0.045 270)"]
+        "displayName": "Island Ink",
+        "canonical": "#24567a",
+        "tonalRamp": ["oklch(15% 0.055 241)", "oklch(27% 0.055 241)", "oklch(39% 0.055 241)", "oklch(51% 0.055 241)", "oklch(63% 0.055 241)", "oklch(75% 0.055 241)", "oklch(87% 0.055 241)", "oklch(95% 0.055 241)"]
       },
-      "violet-ink-soft": {
+      "island-ink-soft": {
         "role": "neutral",
-        "displayName": "Soft Violet Ink",
-        "canonical": "#69738f",
-        "tonalRamp": ["oklch(15% 0.03 270)", "oklch(27% 0.03 270)", "oklch(39% 0.03 270)", "oklch(51% 0.03 270)", "oklch(63% 0.03 270)", "oklch(75% 0.03 270)", "oklch(87% 0.03 270)", "oklch(95% 0.03 270)"]
+        "displayName": "Soft Island Ink",
+        "canonical": "#3e6f91",
+        "tonalRamp": ["oklch(15% 0.045 241)", "oklch(27% 0.045 241)", "oklch(39% 0.045 241)", "oklch(51% 0.045 241)", "oklch(63% 0.045 241)", "oklch(75% 0.045 241)", "oklch(87% 0.045 241)", "oklch(95% 0.045 241)"]
       },
-      "action-violet": {
-        "role": "primary",
-        "displayName": "Action Violet",
-        "canonical": "#5865a8",
-        "tonalRamp": ["oklch(15% 0.08 273)", "oklch(27% 0.08 273)", "oklch(39% 0.08 273)", "oklch(51% 0.08 273)", "oklch(63% 0.08 273)", "oklch(75% 0.08 273)", "oklch(87% 0.08 273)", "oklch(95% 0.08 273)"]
-      },
-      "action-violet-hover": {
-        "role": "primary",
-        "displayName": "Deep Action Violet",
-        "canonical": "#4d599a",
-        "tonalRamp": ["oklch(15% 0.085 273)", "oklch(27% 0.085 273)", "oklch(39% 0.085 273)", "oklch(51% 0.085 273)", "oklch(63% 0.085 273)", "oklch(75% 0.085 273)", "oklch(87% 0.085 273)", "oklch(95% 0.085 273)"]
-      },
-      "mist-paper-field": {
+      "island-sky": {
         "role": "neutral",
-        "displayName": "Mist Paper Field",
-        "canonical": "#eef3ff",
-        "tonalRamp": ["oklch(15% 0.018 260)", "oklch(27% 0.018 260)", "oklch(39% 0.018 260)", "oklch(51% 0.018 260)", "oklch(63% 0.018 260)", "oklch(75% 0.018 260)", "oklch(87% 0.018 260)", "oklch(95% 0.018 260)"]
+        "displayName": "Island Sky",
+        "canonical": "#eaf6fb",
+        "tonalRamp": ["oklch(15% 0.018 226)", "oklch(27% 0.018 226)", "oklch(39% 0.018 226)", "oklch(51% 0.018 226)", "oklch(63% 0.018 226)", "oklch(75% 0.018 226)", "oklch(87% 0.018 226)", "oklch(95% 0.018 226)"]
       },
-      "lavender-haze": {
+      "water-blue": {
+        "role": "primary",
+        "displayName": "Water Blue",
+        "canonical": "#178fdd",
+        "tonalRamp": ["oklch(15% 0.145 240)", "oklch(27% 0.145 240)", "oklch(39% 0.145 240)", "oklch(51% 0.145 240)", "oklch(63% 0.145 240)", "oklch(75% 0.145 240)", "oklch(87% 0.145 240)", "oklch(95% 0.145 240)"]
+      },
+      "water-blue-hover": {
+        "role": "primary",
+        "displayName": "Deep Water Blue",
+        "canonical": "#087fc9",
+        "tonalRamp": ["oklch(15% 0.14 240)", "oklch(27% 0.14 240)", "oklch(39% 0.14 240)", "oklch(51% 0.14 240)", "oklch(63% 0.14 240)", "oklch(75% 0.14 240)", "oklch(87% 0.14 240)", "oklch(95% 0.14 240)"]
+      },
+      "pale-paper": {
+        "role": "neutral",
+        "displayName": "Pale Paper",
+        "canonical": "#fafcf7",
+        "tonalRamp": ["oklch(15% 0.01 116)", "oklch(27% 0.01 116)", "oklch(39% 0.01 116)", "oklch(51% 0.01 116)", "oklch(63% 0.01 116)", "oklch(75% 0.01 116)", "oklch(87% 0.01 116)", "oklch(95% 0.01 116)"]
+      },
+      "petal-gold": {
         "role": "secondary",
-        "displayName": "Lavender Haze",
-        "canonical": "#eeeafd",
-        "tonalRamp": ["oklch(15% 0.025 295)", "oklch(27% 0.025 295)", "oklch(39% 0.025 295)", "oklch(51% 0.025 295)", "oklch(63% 0.025 295)", "oklch(75% 0.025 295)", "oklch(87% 0.025 295)", "oklch(95% 0.025 295)"]
+        "displayName": "Petal Gold",
+        "canonical": "#f4b52f",
+        "tonalRamp": ["oklch(15% 0.14 84)", "oklch(27% 0.14 84)", "oklch(39% 0.14 84)", "oklch(51% 0.14 84)", "oklch(63% 0.14 84)", "oklch(75% 0.14 84)", "oklch(87% 0.14 84)", "oklch(95% 0.14 84)"]
       },
-      "letter-paper": {
-        "role": "neutral",
-        "displayName": "Letter Paper",
-        "canonical": "#fbfcff",
-        "tonalRamp": ["oklch(15% 0.006 260)", "oklch(27% 0.006 260)", "oklch(39% 0.006 260)", "oklch(51% 0.006 260)", "oklch(63% 0.006 260)", "oklch(75% 0.006 260)", "oklch(87% 0.006 260)", "oklch(95% 0.006 260)"]
-      },
-      "envelope-blue": {
+      "apricot-warmth": {
         "role": "secondary",
-        "displayName": "Envelope Blue",
-        "canonical": "#cbd6f3",
-        "tonalRamp": ["oklch(15% 0.04 265)", "oklch(27% 0.04 265)", "oklch(39% 0.04 265)", "oklch(51% 0.04 265)", "oklch(63% 0.04 265)", "oklch(75% 0.04 265)", "oklch(87% 0.04 265)", "oklch(95% 0.04 265)"]
+        "displayName": "Apricot Warmth",
+        "canonical": "#f58b42",
+        "tonalRamp": ["oklch(15% 0.14 52)", "oklch(27% 0.14 52)", "oklch(39% 0.14 52)", "oklch(51% 0.14 52)", "oklch(63% 0.14 52)", "oklch(75% 0.14 52)", "oklch(87% 0.14 52)", "oklch(95% 0.14 52)"]
       },
-      "correspondence-line": {
+      "pink-haze": {
+        "role": "secondary",
+        "displayName": "Pink Haze",
+        "canonical": "#e8a9c1",
+        "tonalRamp": ["oklch(15% 0.075 350)", "oklch(27% 0.075 350)", "oklch(39% 0.075 350)", "oklch(51% 0.075 350)", "oklch(63% 0.075 350)", "oklch(75% 0.075 350)", "oklch(87% 0.075 350)", "oklch(95% 0.075 350)"]
+      },
+      "waterline": {
         "role": "neutral",
-        "displayName": "Correspondence Line",
-        "canonical": "#aeb6d1",
-        "tonalRamp": ["oklch(15% 0.025 270)", "oklch(27% 0.025 270)", "oklch(39% 0.025 270)", "oklch(51% 0.025 270)", "oklch(63% 0.025 270)", "oklch(75% 0.025 270)", "oklch(87% 0.025 270)", "oklch(95% 0.025 270)"]
+        "displayName": "Waterline",
+        "canonical": "#8ecbec",
+        "tonalRamp": ["oklch(15% 0.07 230)", "oklch(27% 0.07 230)", "oklch(39% 0.07 230)", "oklch(51% 0.07 230)", "oklch(63% 0.07 230)", "oklch(75% 0.07 230)", "oklch(87% 0.07 230)", "oklch(95% 0.07 230)"]
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Correspondence Display",
-        "purpose": "Invitation, question, and confirmation headlines."
+        "displayName": "Invitation Display",
+        "purpose": "Invitation headline and film title."
+      },
+      "headline": {
+        "displayName": "Promise Headline",
+        "purpose": "Walk question, promise ticket, and stored confirmation."
       },
       "body": {
         "displayName": "Quiet Body",
-        "purpose": "Short supporting sentences inside the scene."
+        "purpose": "Short supporting copy inside each tableau."
       },
       "label": {
-        "displayName": "Prompt Label",
-        "purpose": "Opening prompts, scene labels, and actions."
+        "displayName": "Keepsake Label",
+        "purpose": "Prompts, ticket metadata, promise rows, and actions."
       }
     },
     "shadows": [
-      { "name": "paper-lift", "value": "0 24px 62px rgba(68, 77, 124, 0.2)", "purpose": "Invitation and question paper floating above the field." },
-      { "name": "envelope-lift", "value": "0 28px 54px rgba(61, 70, 119, 0.24)", "purpose": "Makes the sealed envelope the first-viewport focal object." },
-      { "name": "cover-lift", "value": "0 14px 34px rgba(58, 67, 110, 0.22)", "purpose": "Frames the replaceable movie artwork." },
-      { "name": "action-lift", "value": "0 12px 28px rgba(67, 76, 139, 0.24)", "purpose": "Supports the affirmative action." },
-      { "name": "quiet-control-lift", "value": "0 9px 24px rgba(80, 91, 141, 0.11)", "purpose": "Keeps the secondary action present but subordinate." }
+      {
+        "name": "paper-lift",
+        "value": "0 26px 64px rgba(36, 86, 122, 0.20), 0 4px 12px rgba(36, 86, 122, 0.08)",
+        "purpose": "Invitation and walk-question paper."
+      },
+      {
+        "name": "ticket-lift",
+        "value": "0 28px 68px rgba(36, 86, 122, 0.22), 0 5px 14px rgba(36, 86, 122, 0.09)",
+        "purpose": "The closing promise keepsake."
+      },
+      {
+        "name": "envelope-lift",
+        "value": "0 29px 56px rgba(26, 111, 158, 0.25)",
+        "purpose": "The first-viewport focal envelope."
+      },
+      {
+        "name": "poster-lift",
+        "value": "0 17px 38px rgba(25, 116, 165, 0.27), 0 4px 10px rgba(244, 181, 47, 0.16)",
+        "purpose": "The supplied poster within the invitation."
+      },
+      {
+        "name": "action-lift",
+        "value": "0 12px 30px rgba(23, 143, 221, 0.28)",
+        "purpose": "The positive action in every chapter."
+      }
     ],
     "motion": [
-      { "name": "ease-gentle", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Shared reveal and page easing." },
-      { "name": "page-enter", "value": "700ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Blur-clearing entrance for each route." },
-      { "name": "page-exit", "value": "400ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Brief upward fade before desktop navigation." },
-      { "name": "button-spring", "value": "spring(stiffness: 420, damping: 26)", "purpose": "Hover and press response for choice buttons." },
-      { "name": "floating-spring", "value": "spring(stiffness: 230, damping: 24, mass: 0.82)", "purpose": "Relocation of the playful refusal action." },
-      { "name": "reduced-motion", "value": "10ms or static", "purpose": "Collapses authored movement when reduced motion is requested." }
+      {
+        "name": "ease-gentle",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Shared page, paper, ticket, and envelope reveal easing."
+      },
+      {
+        "name": "reveal-range",
+        "value": "650ms–820ms",
+        "purpose": "Typical duration range for page and object reveals."
+      },
+      {
+        "name": "walk-sequence",
+        "value": "1120ms",
+        "purpose": "Lets the water-lit footprints complete before navigation."
+      },
+      {
+        "name": "button-spring",
+        "value": "spring(stiffness: 420, damping: 26)",
+        "purpose": "Hover and press acknowledgment for the positive action."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "10ms or static",
+        "purpose": "Collapses authored movement when reduced motion is requested."
+      }
     ],
     "breakpoints": [
-      { "name": "sm", "value": "640px" },
-      { "name": "desktop-fine-pointer", "value": "768px and pointer: fine" },
-      { "name": "short-desktop", "value": "max-height: 720px and min-width: 640px" }
+      {
+        "name": "narrow",
+        "value": "359px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "short-desktop",
+        "value": "max-height: 720px and min-width: 640px"
+      }
     ]
   },
   "components": [
     {
-      "name": "Primary Choice Button",
+      "name": "Positive Action",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The affirmative action that advances the invitation story.",
-      "html": "<button class=\"ds-choice-primary\">愿意</button>",
-      "css": ".ds-choice-primary { display:inline-flex; min-width:104px; min-height:48px; align-items:center; justify-content:center; border:0; border-radius:14px; padding:.72rem 1.2rem; background:#5865a8; color:#fff; box-shadow:0 12px 28px rgba(67,76,139,.24); font-family:\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",sans-serif; font-size:.96rem; font-weight:600; letter-spacing:.08em; cursor:pointer; transition:background-color .2s,transform .2s,box-shadow .2s; } .ds-choice-primary:hover { background:#4d599a; transform:translateY(-2px); } .ds-choice-primary:active { transform:scale(.96); } .ds-choice-primary:focus-visible { outline:2px solid #5a67a3; outline-offset:4px; }"
+      "description": "The one affirmative control that advances each chapter.",
+      "html": "<button class=\"ds-positive-action\"><span>收下电影票</span></button>",
+      "css": ".ds-positive-action { position:relative; display:inline-flex; min-width:154px; min-height:50px; overflow:hidden; align-items:center; justify-content:center; border:0; border-radius:14px; padding:.76rem 1.45rem; background:#178fdd; color:#fff; box-shadow:0 12px 30px rgba(23,143,221,.28); font-family:\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",sans-serif; font-size:.96rem; font-weight:650; letter-spacing:.08em; cursor:pointer; transition:background-color .2s,transform .2s; } .ds-positive-action::after { position:absolute; top:-70%; left:-42%; width:34%; height:240%; transform:rotate(22deg); background:rgba(255,255,255,.24); content:\"\"; transition:left 600ms cubic-bezier(.22,1,.36,1); } .ds-positive-action span { position:relative; z-index:1; } .ds-positive-action:hover { transform:translateY(-2px); background:#087fc9; } .ds-positive-action:hover::after { left:118%; } .ds-positive-action:active { transform:scale(.96); } .ds-positive-action:focus-visible { outline:2px solid #178fdd; outline-offset:4px; }"
     },
     {
-      "name": "Secondary Choice Button",
-      "kind": "button",
-      "refersTo": "button-secondary",
-      "description": "The quiet refusal action before it relocates playfully.",
-      "html": "<button class=\"ds-choice-secondary\">不愿意</button>",
-      "css": ".ds-choice-secondary { display:inline-flex; min-width:104px; min-height:48px; align-items:center; justify-content:center; border:0; border-radius:14px; padding:.72rem 1.2rem; background:rgba(255,255,255,.72); color:#59617b; box-shadow:0 9px 24px rgba(80,91,141,.11); font-family:\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",sans-serif; font-size:.96rem; font-weight:600; letter-spacing:.08em; cursor:pointer; transition:background-color .2s,transform .2s; } .ds-choice-secondary:hover { background:#fff; transform:translateY(-2px); } .ds-choice-secondary:active { transform:scale(.96); } .ds-choice-secondary:focus-visible { outline:2px solid #5a67a3; outline-offset:4px; }"
-    },
-    {
-      "name": "Invitation Paper",
+      "name": "Watercolor Paper",
       "kind": "card",
-      "refersTo": "letter-paper",
-      "description": "The inset-framed sheet revealed from the envelope.",
-      "html": "<article class=\"ds-letter-paper\"><span class=\"ds-letter-corner ds-letter-corner-left\"></span><span class=\"ds-letter-corner ds-letter-corner-right\"></span><h2>有一场电影<br>想邀请你一起看</h2><div class=\"ds-letter-divider\"><i></i></div><p>《去你的岛》</p></article>",
-      "css": ".ds-letter-paper { position:relative; overflow:hidden; width:306px; border-radius:16px; padding:28px 24px; color:var(--ink,#303954); text-align:center; background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(248,249,255,.96)),var(--paper,#fbfcff); box-shadow:0 24px 62px rgba(68,77,124,.2); } .ds-letter-paper::before { position:absolute; inset:7px; border:1px solid rgba(144,153,190,.32); border-radius:11px; content:\"\"; pointer-events:none; } .ds-letter-paper h2 { position:relative; margin:0; font-family:var(--font-noto-serif-sc),\"Songti SC\",STSong,serif; font-size:1.72rem; font-weight:500; line-height:1.42; letter-spacing:-.025em; } .ds-letter-paper p { position:relative; margin:18px 0 0; font-family:var(--font-noto-serif-sc),\"Songti SC\",STSong,serif; font-size:1.12rem; letter-spacing:.04em; color:#3f4968; } .ds-letter-corner { position:absolute; top:18px; width:18px; height:18px; border-top:1px solid #aeb6d1; } .ds-letter-corner-left { left:18px; border-left:1px solid #aeb6d1; } .ds-letter-corner-right { right:18px; border-right:1px solid #aeb6d1; } .ds-letter-divider { position:relative; width:78px; height:1px; margin:20px auto; background:linear-gradient(to right,#b9bfd7 0 41%,transparent 41% 59%,#b9bfd7 59%); } .ds-letter-divider i { position:absolute; left:50%; top:50%; width:6px; height:6px; transform:translate(-50%,-50%) rotate(45deg); background:#8892bd; }"
+      "refersTo": "paper-card",
+      "description": "The pale, inset-framed correspondence surface used for the invitation and walk question.",
+      "html": "<article class=\"ds-paper\"><i class=\"ds-corner ds-left\"></i><i class=\"ds-corner ds-right\"></i><h2>有一场电影<br>想邀请你一起看</h2><div class=\"ds-divider\"><b></b></div><p>《去你的岛》</p></article>",
+      "css": ".ds-paper { position:relative; width:306px; overflow:hidden; border-radius:16px; padding:28px 24px; color:#24567a; text-align:center; background:radial-gradient(circle at 10% 13%,rgba(244,181,47,.2),transparent 20%),linear-gradient(135deg,rgba(250,252,247,.98),rgba(234,246,251,.86)),#fafcf7; box-shadow:0 26px 64px rgba(36,86,122,.2),0 4px 12px rgba(36,86,122,.08); } .ds-paper::before { position:absolute; inset:7px; border:1px solid rgba(73,151,192,.27); border-radius:11px; content:\"\"; pointer-events:none; } .ds-paper h2 { position:relative; margin:0; font-family:var(--font-noto-serif-sc),\"Songti SC\",STSong,serif; font-size:1.72rem; font-weight:500; line-height:1.42; letter-spacing:-.025em; } .ds-paper p { position:relative; margin:18px 0 0; font-family:var(--font-noto-serif-sc),\"Songti SC\",STSong,serif; font-size:1.12rem; letter-spacing:.04em; } .ds-corner { position:absolute; top:18px; width:18px; height:18px; border-top:1px solid #8ecbec; } .ds-left { left:18px; border-left:1px solid #8ecbec; } .ds-right { right:18px; border-right:1px solid #8ecbec; } .ds-divider { position:relative; width:78px; height:1px; margin:20px auto; background:linear-gradient(to right,#8ecbec 0 41%,transparent 41% 59%,#8ecbec 59%); } .ds-divider b { position:absolute; left:50%; top:50%; width:6px; height:6px; transform:translate(-50%,-50%) rotate(45deg); background:#f4b52f; }"
     },
     {
-      "name": "Sealed Envelope",
+      "name": "Sealed Watercolor Envelope",
       "kind": "custom",
-      "description": "The precise, floating first-viewport object and ceremonial opener.",
-      "html": "<button class=\"ds-envelope\" aria-label=\"打开电影邀请信\"><span class=\"ds-envelope-back\"></span><span class=\"ds-envelope-flap\"></span><span class=\"ds-envelope-pocket\"></span><span class=\"ds-envelope-seal\"><i></i></span></button>",
-      "css": ".ds-envelope { position:relative; display:block; width:340px; height:225px; border:0; border-radius:0 0 16px 16px; padding:0; background:transparent; cursor:pointer; perspective:900px; } .ds-envelope-back { position:absolute; inset:0; border-radius:0 0 16px 16px; background:linear-gradient(150deg,#cbd6f3,#bfc9eb 62%,#b8bee3); box-shadow:0 28px 54px rgba(61,70,119,.24); } .ds-envelope-flap { position:absolute; z-index:3; left:0; top:0; width:100%; height:52%; clip-path:polygon(0 0,100% 0,50% 100%); background:linear-gradient(170deg,#e5eafb 0%,#c7d2ee 72%,#bac5e7 100%); filter:drop-shadow(0 7px 8px rgba(61,71,118,.1)); transition:transform .48s cubic-bezier(.22,1,.36,1); transform-origin:top; } .ds-envelope-pocket { position:absolute; z-index:2; inset:0; border-radius:0 0 16px 16px; clip-path:polygon(0 17%,50% 66%,100% 17%,100% 100%,0 100%); background:linear-gradient(34deg,#bbc6e8 0 49.4%,transparent 50%),linear-gradient(-34deg,#c9d3ef 0 49.4%,transparent 50%),linear-gradient(180deg,transparent 0 28%,#bdc7e8 29% 100%); } .ds-envelope-seal { position:absolute; z-index:4; left:50%; top:46%; display:grid; width:48px; height:48px; place-items:center; transform:translate(-50%,-50%); border-radius:999px; background:linear-gradient(145deg,#737fb4,#59669e); box-shadow:0 7px 16px rgba(51,60,103,.28),inset 0 0 0 3px rgba(255,255,255,.16); } .ds-envelope-seal i { width:15px; height:15px; transform:rotate(45deg); border:1.5px solid rgba(255,255,255,.9); border-radius:3px 8px 3px 8px; } .ds-envelope:hover .ds-envelope-flap { transform:rotateX(-5deg); } .ds-envelope:active { transform:scale(.99); } .ds-envelope:focus-visible { outline:2px solid #6c78b4; outline-offset:4px; }"
+      "description": "The isolated first-viewport object and ceremonial opener.",
+      "html": "<button class=\"ds-envelope\" aria-label=\"打开电影邀请信\"><span class=\"ds-envelope-back\"></span><span class=\"ds-envelope-flap\"></span><span class=\"ds-envelope-pocket\"></span><span class=\"ds-seal\"><i></i></span></button>",
+      "css": ".ds-envelope { position:relative; display:block; width:340px; height:225px; border:0; border-radius:0 0 16px 16px; padding:0; background:transparent; cursor:pointer; perspective:900px; } .ds-envelope-back { position:absolute; inset:0; border-radius:0 0 16px 16px; background:radial-gradient(circle at 76% 18%,rgba(255,255,255,.32),transparent 22%),linear-gradient(150deg,rgba(185,225,243,.94),rgba(92,184,225,.8)); box-shadow:0 29px 56px rgba(26,111,158,.25); } .ds-envelope-flap { position:absolute; z-index:3; left:0; top:0; width:100%; height:52%; clip-path:polygon(0 0,100% 0,50% 100%); background:radial-gradient(circle at 32% 17%,rgba(255,255,255,.46),transparent 26%),linear-gradient(170deg,rgba(217,241,250,.96),rgba(112,190,225,.8)); filter:drop-shadow(0 7px 8px rgba(28,102,143,.12)); transform-origin:top; transition:transform .48s cubic-bezier(.22,1,.36,1); } .ds-envelope-pocket { position:absolute; z-index:2; inset:0; clip-path:polygon(0 17%,50% 66%,100% 17%,100% 100%,0 100%); background:linear-gradient(34deg,#8dcce7 0 49.4%,transparent 50%),linear-gradient(-34deg,#acdced 0 49.4%,transparent 50%),linear-gradient(180deg,transparent 0 28%,#91cfe8 29% 100%); } .ds-seal { position:absolute; z-index:4; left:50%; top:46%; display:grid; width:48px; height:48px; place-items:center; transform:translate(-50%,-50%); border-radius:999px; background:radial-gradient(circle at 35% 28%,#ffe7a2 0 7%,transparent 8%),linear-gradient(145deg,#f7c95d,#e89b20); box-shadow:0 8px 18px rgba(178,111,14,.28),inset 0 0 0 3px rgba(255,248,216,.34); } .ds-seal i { width:15px; height:15px; transform:rotate(45deg); border:1.5px solid rgba(255,255,255,.94); border-radius:3px 8px 3px 8px; } .ds-envelope:hover .ds-envelope-flap { transform:rotateX(-5deg); } .ds-envelope:active { transform:scale(.99); } .ds-envelope:focus-visible { outline:2px solid #178fdd; outline-offset:4px; }"
     },
     {
-      "name": "Movie Cover",
+      "name": "Accepted Stamp",
+      "kind": "chip",
+      "description": "A brief apricot confirmation stamped onto the invitation after acceptance.",
+      "html": "<span class=\"ds-accepted-stamp\">已收下</span>",
+      "css": ".ds-accepted-stamp { display:inline-block; transform:rotate(-8deg); border:2px solid rgba(245,139,66,.78); border-radius:999px; padding:.58rem .48rem; color:#c96524; background:rgba(250,252,247,.82); font-family:\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.04em; }"
+    },
+    {
+      "name": "Water-Lit Walking Path",
+      "kind": "custom",
+      "description": "Four blue, gold, and pink footprints that bridge the walk question to the promise.",
+      "html": "<div class=\"ds-walk\"><span class=\"ds-shimmer\"></span><i class=\"ds-step ds-one\"><b></b><em></em></i><i class=\"ds-step ds-two\"><b></b><em></em></i><i class=\"ds-step ds-three\"><b></b><em></em></i><i class=\"ds-step ds-four\"><b></b><em></em></i></div>",
+      "css": ".ds-walk { position:relative; width:270px; height:82px; } .ds-shimmer { position:absolute; top:35px; left:7%; width:86%; height:18px; border-radius:50%; background:radial-gradient(ellipse,rgba(23,143,221,.28),transparent 68%); filter:blur(4px); } .ds-step { position:absolute; top:34px; left:50%; width:14px; height:27px; } .ds-step b { position:absolute; top:0; left:4px; width:8px; height:16px; border-radius:58% 42% 54% 46%; background:rgba(23,143,221,.68); box-shadow:0 3px 9px rgba(23,143,221,.2); } .ds-step em { position:absolute; bottom:0; left:1px; width:9px; height:8px; border-radius:50%; background:rgba(244,181,47,.8); } .ds-one { transform:translate(-78px,11px) rotate(-18deg); } .ds-two { transform:translate(-28px,-5px) rotate(14deg); } .ds-three { transform:translate(24px,6px) rotate(-14deg); } .ds-four { transform:translate(76px,-10px) rotate(16deg); }"
+    },
+    {
+      "name": "Promise Ticket",
       "kind": "card",
-      "refersTo": "movie-cover",
-      "description": "A replaceable 3:4 cinematic artifact inside the invitation.",
-      "html": "<div class=\"ds-movie-cover\"><div class=\"ds-movie-cover-art\"></div></div>",
-      "css": ".ds-movie-cover { position:relative; overflow:hidden; width:138px; aspect-ratio:3 / 4; border-radius:14px; background:#dce5fa; box-shadow:0 14px 34px rgba(58,67,110,.22); } .ds-movie-cover-art { position:absolute; inset:0; background:#dce5fa; transition:transform .7s; } .ds-movie-cover::after { position:absolute; inset:0; content:\"\"; background:linear-gradient(to bottom,rgba(255,255,255,.1),transparent 50%,rgba(45,53,95,.12)); pointer-events:none; } .ds-movie-cover:hover .ds-movie-cover-art { transform:scale(1.025); }"
-    },
-    {
-      "name": "Finale Film Mark",
-      "kind": "custom",
-      "description": "The projector-lit film symbol used to close the story without returning to card chrome.",
-      "html": "<div class=\"ds-projector-halo\"><span class=\"ds-film-mark\"><i></i><b></b><em></em><strong></strong></span></div>",
-      "css": ".ds-projector-halo { display:grid; width:96px; height:96px; place-items:center; border-radius:999px; background:radial-gradient(circle,rgba(255,255,255,.98) 0 38%,rgba(210,219,248,.7) 70%,transparent 72%); box-shadow:0 22px 50px rgba(85,94,143,.16); } .ds-film-mark { position:relative; display:block; width:39px; height:31px; border:2px solid #626e9f; border-radius:7px; } .ds-film-mark i,.ds-film-mark b,.ds-film-mark em,.ds-film-mark strong { position:absolute; width:4px; height:4px; border-radius:1px; background:#7b86b3; } .ds-film-mark i { left:5px; top:5px; } .ds-film-mark b { right:5px; top:5px; } .ds-film-mark em { left:5px; bottom:5px; } .ds-film-mark strong { right:5px; bottom:5px; }"
+      "description": "The final notched keepsake containing the fixed ticket number and two checked promises.",
+      "html": "<article class=\"ds-ticket\"><span class=\"ds-waterline\"></span><p class=\"ds-number\">纪念票号&nbsp; YDI-001</p><h2>那就这样约定啦</h2><p class=\"ds-movie\">《去你的岛》</p><div class=\"ds-promises\"><p><i>✓</i>一起看电影</p><p><i>✓</i>看完去散步</p></div><p class=\"ds-goodbye\">那天见</p></article>",
+      "css": ".ds-ticket { position:relative; width:320px; overflow:hidden; border-radius:16px; padding:2.2rem 2rem 2rem; color:#24567a; text-align:center; background:radial-gradient(circle at 4% 12%,rgba(244,181,47,.22),transparent 22%),linear-gradient(135deg,rgba(250,252,247,.98),rgba(234,246,251,.88)),#fafcf7; box-shadow:0 28px 68px rgba(36,86,122,.22),0 5px 14px rgba(36,86,122,.09); } .ds-ticket::before,.ds-ticket::after { position:absolute; top:54%; width:22px; height:22px; border-radius:50%; background:#e7f3f9; content:\"\"; } .ds-ticket::before { left:-11px; } .ds-ticket::after { right:-11px; } .ds-waterline { position:absolute; inset:0 0 auto; height:10px; background:linear-gradient(90deg,#178fdd 0 36%,#f4b52f 36% 64%,#e8a9c1 64% 100%); } .ds-number { margin:0; color:#4d7b98; font-size:.7rem; letter-spacing:.13em; } .ds-ticket h2 { margin:1.35rem 0 0; font-family:var(--font-noto-serif-sc),\"Songti SC\",STSong,serif; font-size:2rem; font-weight:600; line-height:1.35; letter-spacing:-.025em; } .ds-movie { margin:.72rem 0 1.75rem; color:#157eb8; font-family:var(--font-noto-serif-sc),\"Songti SC\",STSong,serif; font-size:1.15rem; letter-spacing:.05em; } .ds-promises { display:grid; gap:.82rem; padding:1.35rem 1.1rem; border-top:1px dashed rgba(59,133,173,.3); border-bottom:1px dashed rgba(59,133,173,.3); } .ds-promises p { display:flex; align-items:center; justify-content:center; gap:.68rem; margin:0; color:#315f7e; font-size:.96rem; letter-spacing:.08em; } .ds-promises i { display:grid; width:22px; height:22px; place-items:center; border-radius:50%; color:#fff; background:#178fdd; font-style:normal; } .ds-goodbye { margin:1.5rem 0 0; color:#b7682f; font-family:var(--font-noto-serif-sc),\"Songti SC\",STSong,serif; font-size:1.08rem; letter-spacing:.16em; }"
     }
   ],
   "narrative": {
-    "northStar": "The Private Cinema Letter",
-    "overview": "This system makes a personal invitation feel like cinematic correspondence discovered in a quiet, self-contained world. Mist-blue paper, violet ink, and exact envelope construction make the interaction ceremonial without turning it into a generic romantic card. The mood is gentle, minimal, and refined; intimacy comes from restraint, sequence, and material detail rather than hearts, roses, or decorative sentimentality.\n\nThe experience follows one small narrative arc: open the sealed letter, choose the movie, ask to walk home, and remember the promise. Its first viewport belongs to one floating sealed envelope and a quiet prompt. Later surfaces retain the same paper, ink, ticket, and film vocabulary so the three routes read as chapters of one correspondence.",
+    "northStar": "The Island Watercolor Ticket",
+    "overview": "This system turns the supplied film poster into a small cinema keepsake. Island-sky blue fills the scene; vivid water blue carries choice and movement; gold, apricot, and pink arrive as petal-like warmth on pale paper. The poster-derived raster texture is part of the material itself, appearing in the atmosphere, envelope, correspondence, and promise ticket so the world feels painted rather than generically romantic.\n\nThe experience is a positive-only sequence: open the private invitation, accept the film, continue into a water-lit moonlit walk, then store the promise ticket. Each route is one quiet tableau, and the first viewport is reserved for a single large watercolor-blue envelope with a gold seal and one opening action.",
     "keyCharacteristics": [
-      "Mist-blue and pale-violet atmosphere with white paper at the center.",
-      "Violet-blue ink instead of black, pink, or red.",
-      "Song-style serif display text paired with a restrained Chinese sans serif.",
-      "Precise envelope folds, inset rules, diamonds, film perforations, and hairline marks.",
-      "Soft ambient depth and slow, purposeful reveals.",
-      "One obvious affirmative action with a playful, non-coercive refusal interaction."
+      "Poster-derived watercolor material across the field, envelope, papers, and ticket.",
+      "Island-sky atmosphere with water-blue controls and ink.",
+      "Golden petals, apricot warmth, and soft-pink haze used as small living accents.",
+      "Song-style serif invitation text paired with a clear Chinese sans serif.",
+      "Centered correspondence objects with soft, blue-tinted lift.",
+      "One affirmative action per chapter, ending in a stored promise ticket."
     ],
     "rules": [
-      { "name": "The Violet-Ink Rule", "body": "Use violet-blue ink for text and marks; pure black does not belong in this paper world.", "section": "colors" },
-      { "name": "The Atmosphere Rule", "body": "Pale blue and lavender may spread across the field, but saturated color remains concentrated in the seal and affirmative action.", "section": "colors" },
-      { "name": "The Correspondence Hierarchy Rule", "body": "Serif type speaks the invitation; sans-serif type handles guidance and choice.", "section": "typography" },
-      { "name": "The One-Scene Rule", "body": "Every route reads as one centered cinematic tableau, never as a conventional stacked landing page.", "section": "layout" },
-      { "name": "The Projector-Light Rule", "body": "Shadows stay cool, diffuse, and low-opacity; depth should feel like paper in soft light, never like a glossy app card.", "section": "elevation" },
-      { "name": "The Precise Geometry Rule", "body": "Use folds, hairlines, diamonds, and film perforations as correspondence marks; avoid loose blobs or novelty romance icons.", "section": "shapes" },
-      { "name": "The Ceremonial Motion Rule", "body": "Motion reveals the sequence—open, choose, walk home, remember—and never runs as unrelated decoration.", "section": "components" }
+      {
+        "name": "The Poster-Palette Rule",
+        "body": "Blue owns the field and action; gold, apricot, and pink punctuate it as petals and keepsake details, never as a generic romance gradient.",
+        "section": "colors"
+      },
+      {
+        "name": "The Water-Blue Action Rule",
+        "body": "Every chapter advances through the same vivid blue affirmative control.",
+        "section": "colors"
+      },
+      {
+        "name": "The Keepsake Hierarchy Rule",
+        "body": "Serif type carries invitation and promise; sans-serif type carries direction, context, and action.",
+        "section": "typography"
+      },
+      {
+        "name": "The One-Tableau Rule",
+        "body": "Each route reads as a single piece of cinematic correspondence, never as a landing-page stack or an app screen.",
+        "section": "layout"
+      },
+      {
+        "name": "The Sealed-First Rule",
+        "body": "Before opening, the envelope and its quiet prompt are the only content and action in the viewport.",
+        "section": "layout"
+      },
+      {
+        "name": "The Painted-Material Rule",
+        "body": "Poster texture must remain visibly integrated with atmosphere and correspondence surfaces; gradients alone are not the visual world.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Blue-Shadow Rule",
+        "body": "Shadows are diffuse and water-tinted, with occasional gold warmth around poster or seal details.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Petal-Not-Heart Rule",
+        "body": "Romance is expressed through poster-derived petals, water, paper, and sequence—never through stock heart iconography.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Story-Motion Rule",
+        "body": "Motion performs the ritual—open, accept, walk, store—and does not exist as unrelated spectacle.",
+        "section": "components"
+      }
     ],
     "dos": [
-      "Do preserve the first viewport as one floating sealed envelope with the quiet “轻点开启邀请” prompt.",
-      "Do keep the three-route story legible as open, choose, walk home, remember.",
-      "Do use cool paper gradients, violet ink, precise envelope construction, and small cinematic marks as the recurring visual language.",
-      "Do maintain keyboard focus, 48px touch targets, safe-area padding, and reduced-motion behavior.",
-      "Do keep supplied copy and real artwork replaceable without redesigning the surrounding correspondence."
+      "Do preserve the first viewport as one floating watercolor-blue envelope with a gold seal and the quiet “轻点开启邀请” prompt.",
+      "Do keep the sequence positive-only: open the invitation, accept the film, continue into the walk, and store the promise ticket.",
+      "Do keep the supplied poster and derived watercolor raster visibly present across atmosphere, envelope, papers, and ticket.",
+      "Do use Water Blue for the single affirmative action in every chapter.",
+      "Do maintain semantic buttons, visible keyboard focus, 50px touch targets, safe-area padding, and reduced-motion behavior.",
+      "Do preserve the real film title, corrected poster description, fixed ticket number, and absence of an invented date."
     ],
     "donts": [
-      "Don't turn the experience into a generic romance template with hearts, roses, red-pink gradients, or sugary decorative copy.",
-      "Don't replace the narrow, centered tableau with dashboard chrome, navigation, feature sections, or commercial event-page patterns.",
-      "Don't add visual noise around the envelope; its isolation is what makes the first click ceremonial.",
-      "Don't use harsh black, hard gray shadows, glass panels, or high-saturation accents that break the mist-blue paper world.",
-      "Don't make the playful refusal unsafe: it must remain visible, keyboard-operable, within viewport edges, and clear of the affirmative action."
+      "Don't reintroduce violet as the system color; the shipped world is island blue, water blue, gold, apricot, pink, and pale paper.",
+      "Don't add a refusal path, branching choice, or coercive joke; the canonical flow contains one positive next action.",
+      "Don't turn the experience into a generic romance card with hearts, roses, red gradients, or sugary ornament.",
+      "Don't replace the narrow centered tableaux with navigation, dashboard chrome, feature sections, or commercial event-page patterns.",
+      "Don't flatten the world into plain gradients or generic white cards; the poster-derived watercolor material is structural.",
+      "Don't add visual noise around the closed envelope; its isolation makes the opening ceremonial."
     ]
   }
 }

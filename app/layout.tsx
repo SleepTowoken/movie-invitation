@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           aria-hidden="true"
           dangerouslySetInnerHTML={{
             __html:
-              "<!-- THESIS: a private cinema letter, not a generic romantic card. OWN-WORLD: mist-blue paper, violet ink, precise envelope geometry. STORY: open, choose, walk home, remember. FIRST VIEWPORT: one floating sealed envelope and a quiet prompt. FORM: cinematic correspondence / approved-plan. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->",
+              "<!-- THESIS: a watercolor cinema keepsake, not a generic romance card. OWN-WORLD: island-sky blue fields, vivid water-blue controls, golden petals, apricot warmth, and soft-pink haze on pale paper. STORY: open a private invitation, accept the film, continue into a moonlit walk, then keep the promise ticket. FIRST VIEWPORT: one large watercolor-blue envelope floats at center with a gold seal; the only action is opening it. FORM: poster-led watercolor correspondence, chosen approved direction; seed island-watercolor-ticket. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->",
           }}
         />
         {children}

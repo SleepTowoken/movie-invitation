@@ -2,19 +2,14 @@
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ChoiceButtons } from "@/components/ChoiceButtons";
 import { PageShell } from "@/components/PageShell";
+import { PositiveAction } from "@/components/PositiveAction";
+import { WalkingPath } from "@/components/WalkingPath";
 import { gentleEase } from "@/lib/motion";
-
-const afterMovieDeclineLabels = [
-  "不可以",
-  "想清楚噢",
-  "真的不可以吗",
-  "我好伤心",
-] as const;
 
 export function AfterMovieQuestion() {
   const [isExiting, setIsExiting] = useState(false);
+  const [isWalking, setIsWalking] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
   return (
@@ -26,26 +21,30 @@ export function AfterMovieQuestion() {
         transition={{ duration: prefersReducedMotion ? 0.01 : 0.82, ease: gentleEase }}
       >
         <div className="mx-auto mb-8 flex w-24 items-center gap-2" aria-hidden="true">
-          <span className="h-px flex-1 bg-[#c2c7dc]" />
+          <span className="h-px flex-1 bg-[#8ecbec]" />
           <span className="ticket-dot" />
-          <span className="h-px flex-1 bg-[#c2c7dc]" />
+          <span className="h-px flex-1 bg-[#8ecbec]" />
         </div>
 
-        <p className="mb-4 text-sm tracking-[0.18em] text-[#59627d]">电影散场之后</p>
-        <h1 className="font-display text-[2rem] font-medium leading-[1.5] tracking-[-0.025em] text-[#303954] sm:text-[2.22rem]">
+        <p className="mb-4 text-sm tracking-[0.18em] text-[#3e6f91]">电影散场之后</p>
+        <h1 className="font-display text-[2rem] font-medium leading-[1.5] tracking-[-0.025em] text-[#24567a] sm:text-[2.22rem]">
           看完电影
           <br />
           可以带你去散步吗？
         </h1>
 
-        <p className="mx-auto mb-9 mt-5 max-w-[18rem] text-[0.94rem] leading-7 text-[#59627d]">
+        <p className="mx-auto mt-5 max-w-[18rem] text-[0.94rem] leading-7 text-[#3e6f91]">
           如果夜风刚好温柔，想再陪你走一段路。
         </p>
 
-        <ChoiceButtons
-          acceptLabel="可以"
-          declineLabels={afterMovieDeclineLabels}
+        <WalkingPath active={isWalking} />
+
+        <PositiveAction
+          label="好呀，去散步"
+          busyLabel="一起出发"
           href="/confirmed"
+          delayMs={1120}
+          onActivate={() => setIsWalking(true)}
           onExitStart={() => setIsExiting(true)}
         />
       </motion.section>

@@ -10,12 +10,12 @@ type ActionButtonProps = Omit<HTMLMotionProps<"button">, "children"> & {
 
 const variantClasses = {
   primary:
-    "bg-[#5865a8] text-white shadow-[0_12px_28px_rgba(67,76,139,0.24)] hover:bg-[#4d599a]",
+    "bg-[#178fdd] text-white shadow-[0_12px_30px_rgba(23,143,221,0.28)] hover:bg-[#087fc9]",
   secondary:
-    "bg-white/72 text-[#59617b] shadow-[0_9px_24px_rgba(80,91,141,0.11)] hover:bg-white",
+    "bg-[#fafcf7] text-[#24567a] shadow-[0_9px_24px_rgba(36,86,122,0.12)] hover:bg-white",
 };
 
-/** Shared visual and motion foundation for every choice button. */
+/** Shared visual and motion foundation for the invitation actions. */
 export const ActionButton = forwardRef<HTMLButtonElement, ActionButtonProps>(
   function ActionButton(
     { variant = "secondary", className = "", children, disabled, ...props },

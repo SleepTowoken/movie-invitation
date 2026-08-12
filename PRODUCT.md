@@ -8,15 +8,15 @@ web
 
 ## Stack
 
-Next.js App Router, TypeScript, Tailwind CSS, Framer Motion, GitHub source control, and Vercel hosting.
+Next.js App Router, TypeScript, Tailwind CSS, Framer Motion, GitHub source control, and GitHub Pages static hosting.
 
 ## Users
 
-One person privately shares the page with someone they would like to invite to a movie. The recipient opens it on a phone or desktop and moves through a short, playful invitation.
+One person privately shares the page with someone they would like to invite to a movie. The recipient opens it primarily on a phone and moves through a short, warm invitation ritual.
 
 ## Product Purpose
 
-Turn a simple movie invitation into a small ritual: open a letter, accept the movie, answer a second invitation after the film, and reach a warm confirmation.
+Turn a simple movie invitation into a small ritual: open a letter, accept the movie ticket, agree to a walk after the film, and keep a commemorative promise ticket.
 
 ## Positioning
 
@@ -29,24 +29,25 @@ The link is most likely opened from a chat app on a phone. It must also work wit
 ## Capabilities and Constraints
 
 - Three routes: the envelope invitation, the after-movie question, and the confirmation.
-- Positive actions navigate forward; negative actions move to a random safe viewport position.
-- The movie cover is replaceable at `/public/movie-cover.png`.
+- The experience presents one clear positive action at each step and has no refusal path.
+- The supplied movie artwork lives at `/public/movie-cover.png` and remains replaceable through one isolated component.
 - No backend, persistence, analytics, music, or complex UI dependencies.
 - All motion is implemented through Framer Motion.
+- The closing ticket uses a fixed decorative ticket number and does not invent a date.
 
 ## Brand Commitments
 
-The product name is `movie-invitation`. The voice is gentle, minimal, refined, and lightly romantic without being sugary. Confirmed colors are pale blue, pale violet, and white with restrained gradients and soft shadows.
+The product name is `movie-invitation`. The voice is gentle, minimal, refined, and lightly romantic without being sugary. The visual world is derived from the supplied poster: icy watercolor blue, vivid water blue, golden and apricot petals, soft pink haze, and pale paper.
 
 ## Evidence on Hand
 
-The exact Chinese copy and interaction requirements were supplied by the user. No real movie artwork or personal photographs were supplied and none may be fabricated.
+The exact Chinese copy, interaction requirements, and real artwork for 《去你的岛》 were supplied by the user. No personal photographs or date details were supplied and none may be fabricated.
 
 ## Product Principles
 
 - Make the first click feel ceremonial.
-- Keep every choice obvious and touch-friendly.
-- Use playfulness without embarrassing or pressuring the recipient.
+- Keep the single next action obvious and touch-friendly.
+- Make each transition feel like a small continuation of the invitation rather than a form choice.
 - Keep the experience fast, private, and easy to replace with real artwork.
 
 ## Accessibility & Inclusion

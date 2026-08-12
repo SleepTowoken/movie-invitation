@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { InvitationCard } from "@/components/InvitationCard";
+import { PetalField } from "@/components/PetalField";
 import { PageShell } from "@/components/PageShell";
 import { gentleEase } from "@/lib/motion";
 
@@ -19,7 +20,7 @@ export function EnvelopeReveal() {
     >
       <section
         className={`envelope-stage relative z-10 w-full max-w-[390px] transition-[min-height] duration-700 ${
-          isOpen ? "min-h-[680px] sm:min-h-[720px]" : "min-h-[390px]"
+          isOpen ? "min-h-[710px] sm:min-h-[760px]" : "min-h-[390px]"
         }`}
         aria-label="电影邀请信"
       >
@@ -43,13 +44,23 @@ export function EnvelopeReveal() {
           <InvitationCard onExitStart={() => setIsExiting(true)} />
         </motion.div>
 
+        <PetalField
+          active={isOpen}
+          className={`envelope-petal-burst ${isOpen ? "is-open" : ""}`}
+        />
+
         <motion.div
           className="absolute left-1/2 top-[96px] h-[225px] w-[min(88vw,340px)] -translate-x-1/2 sm:top-[132px]"
           initial={false}
           animate={
             isOpen
-              ? { y: 454, opacity: 0.28, scale: 0.94 }
-              : { y: 0, opacity: 1, scale: 1 }
+              ? {
+                  y: 260,
+                  opacity: 0,
+                  scale: 0.94,
+                  transitionEnd: { display: "none" },
+                }
+              : { y: 0, opacity: 1, scale: 1, display: "block" }
           }
           transition={{ duration, delay: isOpen ? 0.34 : 0, ease: gentleEase }}
           style={{ perspective: 900 }}
@@ -87,7 +98,7 @@ export function EnvelopeReveal() {
           {!isOpen && (
             <button
               type="button"
-              className="absolute inset-0 z-10 cursor-pointer rounded-[16px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6c78b4] focus-visible:ring-offset-4 focus-visible:ring-offset-[#f1f4ff]"
+              className="absolute inset-0 z-10 cursor-pointer rounded-[16px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#178fdd] focus-visible:ring-offset-4 focus-visible:ring-offset-[#eaf6fb]"
               onClick={() => setIsOpen(true)}
               aria-label="打开电影邀请信"
             />
@@ -101,8 +112,8 @@ export function EnvelopeReveal() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.55, duration: 0.6 }}
           >
-            <p className="text-sm tracking-[0.16em] text-[#505a76]">轻点开启邀请</p>
-            <span className="mx-auto mt-3 block h-7 w-px bg-gradient-to-b from-[#8c95bb] to-transparent" />
+            <p className="text-sm tracking-[0.16em] text-[#24567a]">轻点开启邀请</p>
+            <span className="mx-auto mt-3 block h-7 w-px bg-gradient-to-b from-[#178fdd] to-transparent" />
           </motion.div>
         )}
       </section>
